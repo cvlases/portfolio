@@ -3,13 +3,8 @@ import PixelIconGraphic from './PixelIconGraphic';
 export default function DesktopIcon({ icon, isSelected, onSelect, onOpen, mobileOpen }) {
   const handleClick = (event) => {
     event.stopPropagation();
-
-    if (mobileOpen) {
-      onOpen();
-      return;
-    }
-
     onSelect(icon.key);
+    onOpen();
   };
 
   return (
@@ -17,10 +12,6 @@ export default function DesktopIcon({ icon, isSelected, onSelect, onOpen, mobile
       type="button"
       className="icon"
       onClick={handleClick}
-      onDoubleClick={(event) => {
-        event.stopPropagation();
-        onOpen();
-      }}
       aria-label={icon.label}
     >
       {icon.kind === 'image' ? (

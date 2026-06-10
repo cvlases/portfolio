@@ -3,79 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Projects</title>
-    <style>
-        body {
-            font-family: "Courier New", Courier, monospace;
-            background-color: #c0c0c0;
-            margin: 5;
-            padding: 25px;
-            text-align: center;
-        }
-        .content {
-            background-color: white;
-            border: 2px solid black;
-            padding: 20px;
-            box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
-        }
-        .content p {
-            margin-bottom: 16px;
-        }
-        .content table {
-            width: 100%;
-        }
-        .content img {
-            vertical-align: top;
-        }
-        .pdf {
-            padding: 20px;
-            transition: transform .2s;
-            margin: 0 auto;
-        }
-        .pdf:hover {
-            transform: scale(1.2);
-        }
-    </style>
+    <link rel="stylesheet" href="../css/portfolio.css">
+    <title>Portfolio</title>
 </head>
 <body>
-    <div class="content">
-        <h1>Coding Projects</h1>
-        <p>Most recently... </p>
-        <p>I've been working for the State of Montana's cybersecurity team.
-            I've been using XSOAR to automate response playbooks.
-        </p>
-        <hr>
-        <table>
-            <tr>
-                <td>
-                    <p> My last coding job was working for my professor on
-                        dual graph theory in political redistricting.
-                        I was lucky enough to present my research at the 
-                        Southern California Applied Mathematics Symposium
-                        for the first time and actually won best poster and presentation!! 
-                    </p>
-                </td>
-                <td>
-                    <img src="../assets/presenting.jpg" style="width:200px;height:250px;">
-                </td>
-            </tr>
-        </table>
-        <h1>SOCAMS Research Poster</h1>
-        <h3>Presented April 2024</h3>
-        <div class="pdf">
-            <a href="../assets/SOCAMS Research Poster.pdf" target="_blank">
-                <img src="../assets/pdf-thumbnail.png" alt="SOCAMS Research Poster" class="pdf" width="400px" height="200px">
-            </a>
-        </div>
-        <hr>
-        <p>And a recent coding project for class that I am really proud of 
-            is an AI Art generating Google Colab. 
-        </p>
-        <a href="https://colab.research.google.com/drive/1VffeeiNu_ibA8abpDhg1CQigIuu5Lu0r?usp=sharing" target="_blank">Check it out here.</a>
-        <hr>
-        <p>
-            Don't forget to add in links to the coding/tech scholarships/awards, as well as coding club stuff!!!!
-        </p>
+    <div class="window-page">
+        <section class="hero-panel">
+            <div class="hero-copy">
+                <p class="section-label">// portfolio</p>
+                <h1>Selected Work</h1>
+                <p class="hero-note">A cross-disciplinary archive of things I have built, designed, researched, written, and made weird on purpose.</p>
+            </div>
+        </section>
+
+        <section class="section-block" id="featured">
+            <div class="section-heading">
+                <p class="section-label">// featured</p>
+                <p class="section-note">Open any card to jump into a project window.</p>
+            </div>
+            <div class="project-grid project-grid--featured">
+                <button type="button" class="project-card project-card--visual tone-blue" onclick="window.parent.openPopup('html/projects/socams.html', 860, 640)">
+                    <div class="project-image">
+                        <span class="project-index">01</span>
+                        <span class="project-type">Research + Systems</span>
+                    </div>
+                    <div class="project-copy">
+                        <p class="project-meta">2024 · Math · Visualization</p>
+                        <h2>SOCAMS Research Poster</h2>
+                        <p class="project-summary">Dual graph theory, redistricting, and award-winning research communication.</p>
+                    </div>
+                </button>
+
+                <button type="button" class="project-card project-card--visual tone-green" onclick="window.parent.openPopup('html/projects/cybersecurity.html', 860, 640)">
+                    <div class="project-image">
+                        <span class="project-index">02</span>
+                        <span class="project-type">Build + Security</span>
+                    </div>
+                    <div class="project-copy">
+                        <p class="project-meta">Recent · Real Work · Automation</p>
+                        <h2>Cybersecurity Automation</h2>
+                        <p class="project-summary">Operational tooling and response playbooks built for real-world systems.</p>
+                    </div>
+                </button>
+
+                <button type="button" class="project-card project-card--visual tone-lilac" onclick="window.parent.openPopup('html/projects/ai-colab.html', 860, 640)">
+                    <div class="project-image">
+                        <span class="project-index">03</span>
+                        <span class="project-type">Creative Tech</span>
+                    </div>
+                    <div class="project-copy">
+                        <p class="project-meta">Class Project · AI · Experiment</p>
+                        <h2>AI Art Colab</h2>
+                        <p class="project-summary">A generative art tool exploring playful, accessible AI workflows.</p>
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <section class="finder-bar">
+            <div class="finder-copy">
+                <p class="section-label">// browse by lens</p>
+                <p class="finder-note">Projects can live in more than one category. The point is signal, not perfect buckets.</p>
+            </div>
+            <div class="lens-grid">
+                <a href="#featured" class="lens-button">Featured</a>
+                <a href="#build" class="lens-button">Build</a>
+                <a href="#design" class="lens-button">Design</a>
+                <a href="#research" class="lens-button">Research</a>
+                <a href="#art" class="lens-button">Art</a>
+                <a href="#ethics" class="lens-button">Ethics / Philosophy</a>
+                <a href="#systems" class="lens-button">Math / Systems</a>
+                <a href="#play" class="lens-button">Play</a>
+                <a href="#all-work" class="lens-button lens-button--accent">Find All</a>
+            </div>
+        </section>
+
+        <section class="section-block" id="all-work">
+            <div class="section-heading">
+                <p class="section-label">// find all</p>
+                <p class="section-note">A fuller archive with room for hybrid work.</p>
+            </div>
+
+            <div class="archive-sections">
+                <section class="archive-section" id="build">
+                    <h3>Build</h3>
+                    <div class="mini-grid">
+                        <button type="button" class="project-card project-card--mini tone-green" onclick="window.parent.openPopup('html/projects/cybersecurity.html', 860, 640)">
+                            <div class="project-image"><span class="project-type">Automation</span></div>
+                            <div class="project-copy"><h2>Cybersecurity</h2><p class="project-summary">XSOAR playbooks and tooling.</p></div>
+                        </button>
+                        <button type="button" class="project-card project-card--mini tone-lilac" onclick="window.parent.openPopup('html/projects/ai-colab.html', 860, 640)">
+                            <div class="project-image"><span class="project-type">AI</span></div>
+                            <div class="project-copy"><h2>AI Art Colab</h2><p class="project-summary">Generative tool experiment.</p></div>
+                        </button>
+                        <button type="button" class="project-card project-card--mini tone-peach">
+                            <div class="project-image"><span class="project-type">Remakes</span></div>
+                            <div class="project-copy"><h2>App Remakes</h2><p class="project-summary">Rebuilt interfaces to learn by shipping.</p></div>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="archive-section" id="design">
+                    <h3>Design</h3>
+                    <div class="mini-grid">
+                        <button type="button" class="project-card project-card--mini tone-peach" onclick="window.parent.openPopup('html/projects/design.html', 860, 640)">
+                            <div class="project-image"><span class="project-type">UI Systems</span></div>
+                            <div class="project-copy"><h2>Figma Work</h2><p class="project-summary">Flows, systems, product thinking.</p></div>
+                        </button>
+                        <button type="button" class="project-card project-card--mini tone-yellow" onclick="window.parent.openPopup('html/projects/hackathon-ux.html', 860, 640)">
+                            <div class="project-image"><span class="project-type">Hackathon</span></div>
+                            <div class="project-copy"><h2>Hackathon UX</h2><p class="project-summary">Rapid decisions and prototypes.</p></div>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="archive-section" id="research">
+                    <h3>Research</h3>
+                    <div class="mini-grid">
+                        <button type="button" class="project-card project-card--mini tone-blue" onclick="window.parent.openPopup('html/projects/socams.html', 860, 640)">
+                            <div class="project-image"><span class="project-type">Poster</span></div>
+                            <div class="project-copy"><h2>SOCAMS</h2><p class="project-summary">Applied math and communication.</p></div>
+                        </button>
+                        <button type="button" class="project-card project-card--mini tone-green" onclick="window.parent.openPopup('html/projects/papers.html', 860, 640)">
+                            <div class="project-image"><span class="project-type">Writing</span></div>
+                            <div class="project-copy"><h2>Papers</h2><p class="project-summary">Synthesis and investigation.</p></div>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="archive-section" id="art">
+                    <h3>Art</h3>
+                    <div class="mini-grid">
+                        <button type="button" class="project-card project-card--mini tone-rose" onclick="window.parent.openPopup('html/projects/art.html', 860, 640)">
+                            <div class="project-image"><span class="project-type">Visual</span></div>
+                            <div class="project-copy"><h2>Visual Work</h2><p class="project-summary">Image-making and experiments.</p></div>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="archive-section" id="ethics">
+                    <h3>Ethics / Philosophy</h3>
+                    <div class="mini-grid">
+                        <button type="button" class="project-card project-card--mini tone-peach" onclick="window.parent.openPopup('html/projects/ethics.html', 860, 640)">
+                            <div class="project-image"><span class="project-type">Values</span></div>
+                            <div class="project-copy"><h2>Ethics Work</h2><p class="project-summary">Technology, responsibility, and public-interest thinking.</p></div>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="archive-section" id="systems">
+                    <h3>Math / Systems</h3>
+                    <div class="mini-grid">
+                        <button type="button" class="project-card project-card--mini tone-blue" onclick="window.parent.openPopup('html/projects/socams.html', 860, 640)">
+                            <div class="project-image"><span class="project-type">Graphs</span></div>
+                            <div class="project-copy"><h2>Redistricting</h2><p class="project-summary">Structure, rigor, modeling.</p></div>
+                        </button>
+                        <button type="button" class="project-card project-card--mini tone-lilac" onclick="window.parent.openPopup('html/projects/data-vis.html', 860, 640)">
+                            <div class="project-image"><span class="project-type">Data Vis</span></div>
+                            <div class="project-copy"><h2>Data Visuals</h2><p class="project-summary">Communication through structure.</p></div>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="archive-section" id="play">
+                    <h3>Play</h3>
+                    <div class="mini-grid">
+                        <button type="button" class="project-card project-card--mini tone-yellow" onclick="window.parent.openPopup('html/projects/play.html', 860, 640)">
+                            <div class="project-image"><span class="project-type">Weird</span></div>
+                            <div class="project-copy"><h2>Side Quests</h2><p class="project-summary">Hybrids, delight, strange prototypes.</p></div>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </section>
     </div>
 </body>
 </html>
