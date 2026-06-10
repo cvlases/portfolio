@@ -168,6 +168,102 @@ body {
     background: white;
 }
 
+.origin-story {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    gap: 22px;
+    margin-top: 8px;
+    align-items: start;
+}
+
+.origin-column {
+    display: grid;
+    gap: 14px;
+    align-content: start;
+}
+
+.origin-kicker {
+    margin: 0;
+    font-family: var(--font-ui);
+    font-size: 9px;
+    color: #000080;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.origin-article {
+    display: grid;
+    gap: 14px;
+    align-content: start;
+}
+
+.origin-article p {
+    margin: 0;
+    display: grid;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 56ch;
+}
+
+.origin-rail {
+    display: grid;
+    gap: 12px;
+}
+
+.origin-card {
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    box-shadow: 2px 2px 0 #000;
+}
+
+.origin-card span {
+    font-family: var(--font-ui);
+    font-size: 9px;
+    color: #000080;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.origin-card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.origin-card--hero {
+    min-height: 220px;
+    justify-content: end;
+}
+
+.origin-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.tone-wheat {
+    background: linear-gradient(135deg, #ead8b4, #fff8ec 72%);
+}
+
+.tone-sky {
+    background: linear-gradient(135deg, #c9dbf3, #f3f8ff 72%);
+}
+
+.tone-forest {
+    background: linear-gradient(135deg, #d6e4cf, #f3fbf0 72%);
+}
+
+.tone-rose {
+    background: linear-gradient(135deg, #efd4d0, #fff5f4 72%);
+}
+
 .quick-facts {
     grid-column: 1 / -1;
     padding: 16px 16px 12px;
@@ -343,6 +439,10 @@ body {
         grid-template-columns: 170px 1fr;
     }
 
+    .origin-story {
+        grid-template-columns: 1fr;
+    }
+
     .focus-buttons {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -363,6 +463,10 @@ body {
 
     .fact:nth-last-child(-n + 2) {
         border-bottom: 0;
+    }
+
+    .origin-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -404,5 +508,9 @@ body {
     .contact-button,
     .focus-button {
         width: 100%;
+    }
+
+    .origin-gallery {
+        grid-template-columns: 1fr;
     }
 }
