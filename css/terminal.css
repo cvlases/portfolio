@@ -1,0 +1,119 @@
+/* terminal.css */
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f3ee; /* Soft cream background */
+    color: #f1ecec; /* Gray for text */
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  
+  #terminal {
+    width: 95%;
+    max-width: 800px;
+    height: 90%;
+    background-color: #330b37; /* dark purple */
+    border: 3px solid #ffd6e8; /* Soft pink border */
+    border-radius: 12px; /* Rounded corners */
+    padding: 15px;
+    overflow-y: auto;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Welcome message stays at the top */
+#welcome-message {
+    background-color: #330b37; /* Slightly darker for contrast */
+    color: #8cc9d8; /* blue */
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+    flex-shrink: 0; /* Fixes size */
+  }
+  
+  /* Output container (takes up remaining space) */
+#output-container {
+    flex-grow: 1; /* Fills available vertical space */
+    overflow-y: auto; /* Enables scrolling for large output */
+    padding: 10px;
+  }
+
+  #output {
+    flex-grow: 1;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    color: #e27cca; /* Soft purple for output text */
+  }
+  
+/* Input line is fixed at the bottom */
+#input-line {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #6b2c71; /* Matches the terminal theme */
+    border-top: 1px solid #4a0040; /* Border for separation */
+    flex-shrink: 0; /* Ensure it stays fixed */
+  }
+  
+  .prompt {
+    margin-right: 10px;
+    color: #85dcde; /* Muted pinkish-purple for the prompt */
+  }
+  
+  #command-input {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    color: #ff99eb; /* Matches the prompt */
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+  }
+  
+  #command-input::placeholder {
+    color: #c0a2b9; /* Faint placeholder text */
+  }
+  
+  /* Add soft glowing effect */
+  #terminal {
+    box-shadow: 0px 0px 15px #ffd6e8;
+  }
+  
+  /* Custom Scrollbar */
+  #terminal::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  #terminal::-webkit-scrollbar-thumb {
+    background: #ffd6e8;
+    border-radius: 4px;
+  }
+  
+  #output-container {
+    scroll-behavior: smooth;
+  }
+
+  /* Styling for user commands */
+.user {
+    color: #85dcde; /* Light teal for user input */
+    font-weight: bold; /* Makes user commands stand out */
+  }
+  
+  /* Styling for computer responses */
+  .response {
+    color: #e27cca; /* Light pink-purple for computer responses */
+  }
+  
+  .response a {
+    color: #8cc9d8; /* Light blue for links */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .response a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #ffd6e8; /* Soft pink on hover */
+  }

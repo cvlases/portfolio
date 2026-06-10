@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claire's Terminal</title>
+  <link rel="stylesheet" href="../css/terminal.css">
+</head>
+<body>
+  <div id="terminal">
+    <div id="welcome-message">
+      Welcome to Claire's Terminal!<br>Type 'help' for a list of commands.
+    </div>
+    <div id="output-container">
+      <div id="output"></div>
+    </div>
+    <div id="input-line">
+      <span class="prompt">guest@claire:~$</span>
+      <input type="text" id="command-input" autofocus placeholder="Type a command...">
+    </div>
+  </div>
+  <script src="../js/terminal.js"></script>
+</body>
+</html>

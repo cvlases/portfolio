@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+  font-family: "Georgia", serif;
+  background-color: #faf8f2;
+  color: #444;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Allow items to adjust to screen size */
+  gap: 20px; /* Spacing between frames */
+  padding: 20px;
+  align-items: start; /* Align frames to the top */
+}
+
+/* Ornate Frames */
+.art-frame {
+  position: relative;
+  background: #fff;
+  border: 8px solid #c1a97e; /* Ornate gold frame */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.art-frame:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Size Variations */
+.size-large {
+  grid-column: span 2; /* Make large frames span 2 columns */
+  grid-row: span 2; /* Make large frames span 2 rows */
+}
+
+.size-medium {
+  grid-column: span 1; /* Medium frames span 1 column */
+  grid-row: span 1; /* Medium frames span 1 row */
+}
+
+.size-small {
+  grid-column: span 1; /* Small frames span 1 column */
+  grid-row: span 1; /* Small frames span 1 row */
+}
+
+/* Image Styling */
+.art-frame img {
+  width: 100%; /* Ensure the image fits the frame */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin-bottom: 10px; /* Space between image and caption */
+}
+
+/* Captions */
+.art-caption {
+  font-size: 1rem; /* Slightly smaller captions */
+  font-family: "Times New Roman", serif;
+  font-style: italic;
+  color: #8b6d43;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.8); /* Light background for readability */
+  border: 1px solid #c1a97e; /* Matches the ornate frame style */
+  opacity: 0; /* Hidden by default */
+  transform: translateY(20px); /* Slide effect */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Caption appears on hover */
+.art-frame:hover .art-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2rem;
+  color: #5a5a5a;
+  margin: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+  background: #f5e8d8; /* Decorative background */
+  padding: 10px;
+  border: 2px solid #c1a97e;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+/* Dividers */
+.divider {
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(to right, #c1a97e, transparent, #c1a97e);
+  margin: 40px auto;
+  border-radius: 3px;
+}
+
+/* Section Background Colors */
+.gallery-section:nth-child(odd) {
+  background-color: #faf8f2;
+}
+
+.gallery-section:nth-child(even) {
+  background-color: #f0ece4;
+  padding: 20px 0;
+}
+
+/* Themed Borders for Sections */
+
+#snowstock-section .art-frame {
+  border: 15px double #d4a373;
+    background: linear-gradient(to bottom, #f8efe0, #e6d5c3); /* Subtle cream gradient */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; /* Soft rounded edges */
+    background-clip: padding-box;
+    overflow: hidden;
+}
+
+
+#bike-section .art-frame {
+  border: 2px solid #333; /* Thin black border */
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+#bike-section .art-frame:hover {
+  transform: scale(1.05); /* Enlarge slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+#published-section .art-frame {
+  border: 12px groove #8b6d43; /* Engraved brown border */
+    background: linear-gradient(to bottom, #f9f5f0, #e7dfd7); /* Soft cream gradient */
+}

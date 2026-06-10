@@ -1,0 +1,105 @@
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: 'PX Sans', 'Courier New', monospace;
+      background: transparent;
+  }
+  
+  .wizard-window {
+      width: 480px;
+      background: #c0c0c0;
+      border-top:    2px solid #ffffff;
+      border-left:   2px solid #ffffff;
+      border-right:  2px solid #000000;
+      border-bottom: 2px solid #000000;
+  }
+
+  .wizard-titlebar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3px 4px;
+      background: #000080;
+      color: white;
+      font-size: 11px;
+      font-weight: bold;
+  }
+
+  .wizard-body {
+      display: flex;
+      min-height: 280px;
+  }
+
+.wizard-left {
+      width: 150px;
+      padding: 0;
+      overflow: hidden;
+  }
+
+.wizard-left img {
+      width: 100%; 
+      height: 100%;
+      object-fit: cover;
+      image-rendering: pixelated;
+        border-top:    2px solid #808080;
+        border-left:   2px solid #808080;
+        border-right:  2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+  }
+  
+  .wizard-left-name {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.2;
+  }
+
+  .wizard-right {
+      flex: 1;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+  }
+
+  .wizard-footer {
+      padding: 8px;
+      border-top: 1px solid #808080;
+      display: flex;
+      justify-content: flex-end;
+  }
+
+    .role-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+  }
+
+    .wizard-close,
+  .wizard-next {
+      background: #c0c0c0;
+      font-family: 'PX Sans', 'Courier New', monospace;
+      font-size: 11px;
+      cursor: pointer;
+      color: #000;
+      border-top:    1px solid #ffffff;
+      border-left:   1px solid #ffffff;
+      border-right:  1px solid #808080;
+      border-bottom: 1px solid #808080;
+  }
+
+  .wizard-close {
+      padding: 2px 6px;
+  }
+
+  .wizard-next {
+      padding: 4px 16px;
+      border-right:  1px solid #808080;
+      border-bottom: 1px solid #808080;
+  }
+
+    .wizard-prompt {
+      font-size: 12px;
+      font-weight: bold;
+      margin: 0 0 4px 0;
+  }

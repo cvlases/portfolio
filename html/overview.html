@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/expand.css">
+    <title>About</title>
+    <style>
+        body {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #c0c0c0;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+        }
+        .content {
+            background-color: white;
+            border: 2px solid black;
+            padding: 10px;
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
+            margin-bottom: 20px; /* Space between text and expanding cards */
+            width: 100%;
+            margin: 0 auto 20px auto; /* Space between text and expanding cards, center horizontally */
+            overflow: auto; /* Ensure content inside the div is scrollable if needed */
+        
+        }
+        .container {
+            display: flex;
+            width: 73vw;
+            height: 88vh; /* Adjust the height as necessary */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>About Me</h1>
+        <p>Hi there!</p>
+        <p>I'm Claire Vlases, a senior in college studying 
+            computer science, philosophy, and ethics.</p>
+        <p> I love art, the environment, and coding!</p>
+        <div class="container">
+            <div class="panel active" style="background-image: url('../assets/cowboy.jpg');">
+                <h3>I grew up on a farm in Montana</h3>
+            </div>
+            <div class="panel" style="background-image: url('../assets/daisy.jpeg');">
+                <h3>I'm an artist</h3>
+            </div>
+            <div class="panel" style="background-image: url('../assets/snow.jpeg');">
+                <h3>I love the mountains</h3>
+            </div>
+            <div class="panel" style="background-image: url('../assets/class1.jpg');">
+                <h3> I &lt;3 coding!</h3>
+            </div>
+            <div class="panel" style="background-image: url('../assets/linkedinheadshot.jpeg');">
+                <h3>I'm an environmental advocate</h3>
+            </div>
+        </div>
+    </div>
+    <script src="../js/expand.js"></script>
+</body>
+</html>

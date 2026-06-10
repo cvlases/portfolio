@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/about.css">
+    <title>About</title>
+</head>
+
+<body>
+
+    <div class="hero">
+        <div class="hero-image">
+            <img src="../assets/headshot.jpg" alt="Headshot">
+        </div>
+        <div class="hero-text">
+            <p class="section-label">// about</p>
+            <h1>Claire Vlases</h1>
+            <p class="tagline">"designing for stakeholders, not just shareholders."</p>
+            <p class="bio">HCI researcher, creative technologist, and artist. Currently a master's student at Carnegie Mellon University. I build things that sit at the intersection of technology, design, and the world we actually want to live in.</p>
+            <div class="tags">
+                <span class="tag">UX Design</span>
+                <span class="tag">Creative Tech</span>
+                <span class="tag">HCI Research</span>
+                <span class="tag">Environmental</span>
+                <span class="tag">Art</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="obsessions">
+        <p class="section-label">// currently obsessed with</p>
+        <div class="obsessions-grid">
+            <a href="#" class="obsession-card">
+                <div class="obsession-img" style="background:#d4c5b0;"></div>
+                <p>painting fruit</p>
+            </a>
+            <a href="#" class="obsession-card">
+                <div class="obsession-img" style="background:#b0bbd4;"></div>
+                <p>"morning in america" by Durand Jones</p>
+            </a>
+            <a href="#" class="obsession-card">
+                <div class="obsession-img" style="background:#c4d4b0;"></div>
+                <p>making my own nodes in ComfyUI</p>
+            </a>
+            <a href="#" class="obsession-card">
+                <div class="obsession-img" style="background:#d4b0c5;"></div>
+                <p>XR "tattoos"</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="contact">
+        <a href="mailto:you@email.com">✉ email</a>
+        <a href="https://linkedin.com/in/yourhandle" target="_blank">in linkedin</a>
+        <a href="https://github.com/yourhandle" target="_blank">{ } github</a>
+    </div>
+
+    <div class="cta">
+        <button id="wizard-button">✦ not sure where to start? ask the Wizard</button>
+    </div>
+
+</body>
+
+<script>
+    document.getElementById('wizard-button').addEventListener('click', function() {
+        window.parent.openPopup('html/wizard.html', 500, 400);
+    });
+</script>
+</html>
