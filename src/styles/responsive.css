@@ -1,0 +1,48 @@
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+
+  .desktop {
+    min-height: 100dvh;
+    padding-bottom: 36px;
+  }
+
+  .desktop-icons {
+    width: auto;
+    padding: 8px 8px 52px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 72px));
+    justify-content: space-around;
+  }
+
+  .icon {
+    margin: 8px 4px;
+  }
+
+  .window-layer {
+    position: static;
+  }
+
+  .popup {
+    position: relative;
+    inset: auto;
+    width: calc(100vw - 24px) !important;
+    height: 70vh !important;
+    margin: 0 12px 12px;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  .popup-header {
+    cursor: default;
+  }
+
+  .start-bar {
+    gap: 4px;
+  }
+
+  .taskbar-windows {
+    display: none;
+  }
+}

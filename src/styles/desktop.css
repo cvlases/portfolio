@@ -1,0 +1,131 @@
+.desktop {
+  min-height: 100vh;
+  position: relative;
+  background: teal;
+}
+
+.desktop-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 104px;
+  padding: 8px 0 44px 8px;
+}
+
+.icon {
+  width: 72px;
+  min-height: 72px;
+  margin: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.icon-img,
+.pixel-icon {
+  width: 32px;
+  padding-bottom: 8px;
+  user-select: none;
+}
+
+.icon-txt {
+  width: max-content;
+  font-size: 0.5em;
+  padding: 2px;
+  line-height: 130%;
+  min-height: 12px;
+  text-align: center;
+  margin: 0;
+}
+
+.icon-txt_selected {
+  background: rgb(0, 0, 128);
+  border: 1px dotted white;
+}
+
+.pixel-icon {
+  position: relative;
+  display: inline-block;
+  height: 32px;
+}
+
+.pixel-icon--computer {
+  background: #d8d8d8;
+  border: 2px solid #000;
+}
+
+.pixel-icon--computer::before {
+  content: '';
+  position: absolute;
+  inset: 4px 4px 10px;
+  background: #091a8f;
+}
+
+.pixel-icon--computer::after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  right: 9px;
+  bottom: 2px;
+  height: 4px;
+  background: #000;
+}
+
+.pixel-icon--folder {
+  background: #d8b04f;
+  border: 2px solid #000;
+  border-radius: 1px;
+}
+
+.pixel-icon--folder::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 2px;
+  width: 14px;
+  height: 8px;
+  background: #e5c56a;
+  border: 2px solid #000;
+  border-bottom: 0;
+}
+
+.pixel-icon--globe,
+.pixel-icon--trash {
+  border: 2px solid #000;
+  background: #d8d8d8;
+}
+
+.pixel-icon--globe::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #47a3ff 0 45%, #2a6f2a 46% 64%, #47a3ff 65%);
+  border: 1px solid #000;
+}
+
+.pixel-icon--trash::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 7px;
+  width: 14px;
+  height: 18px;
+  background: #fff;
+  border: 2px solid #000;
+}
+
+.pixel-icon--trash::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 10px;
+  height: 4px;
+  background: #000;
+}
