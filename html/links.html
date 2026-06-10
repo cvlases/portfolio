@@ -1,61 +1,66 @@
-<!-- links.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/scroll.css" />
+    <link rel="stylesheet" href="../css/links.css">
     <title>Links</title>
-    <style>
-        body {
-            font-family: "Courier New", Courier, monospace;
-            background-color: #c0c0c0;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        .content {
-            background-color: white;
-            border: 2px solid black;
-            padding: 10px;
-            box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
-            align-items: center;
-        }
-    </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Links</h1>
-        <hr>
-        <div class="box">
-            <h2>
-                <a href="https://www.linkedin.com/in/clairevlases/" target="_blank">
-                    <img src="../assets/Linkedin-vintage.png" alt="linkedin" style="width:100px;height:100px;">
-                </a>
-            </h2>
-        </div>
-        <div class="box">
-            <h2>
-                <a href="https://github.com/cvlases" target="_blank">
-                    <img src="../assets/github-logo.png" alt="Github" style="width:100px;height:100px;">
-                </a>
-            </h2>
-        </div>
-        <div class="box">
-            <h2>
-                <a href="mailto:clairevlases@gmail.com?subject=subject&body=content" target="_blank">
-                    <img src="../assets/email.png" alt="Email" style="width:100px;height:100px;">
-                </a>
-            </h2>
-        </div>
-        <div class="box">
-            <h2>
-                <a href="../assets/Vlases, Claire_Resume_May 2024.pdf" target="_blank">
-                    <img src="../assets/resume.png" alt="Resume" style="width:100px;height:100px;">
-                </a>
-            </h2>
-        </div>
+    <div class="links-page">
+        <section class="links-hero">
+            <div class="links-copy">
+                <p class="section-label">// links</p>
+                <h1>Find me elsewhere</h1>
+                <p class="hero-note">The fast path for recruiters, collaborators, and people who want the practical version of the internet.</p>
+            </div>
+        </section>
+
+        <section class="links-grid">
+            <a class="link-card tone-blue" href="https://www.linkedin.com/in/clairevlases/" target="_blank" rel="noreferrer">
+                <div class="link-card-art">
+                    <span class="link-kicker">professional</span>
+                    <span class="link-glyph">in</span>
+                </div>
+                <div class="link-card-copy">
+                    <h2>LinkedIn</h2>
+                    <p>Experience, background, and the recruiter-friendly version of me.</p>
+                </div>
+            </a>
+
+            <a class="link-card tone-dark" href="https://github.com/cvlases" target="_blank" rel="noreferrer">
+                <div class="link-card-art">
+                    <span class="link-kicker">code</span>
+                    <span class="link-glyph">{ }</span>
+                </div>
+                <div class="link-card-copy">
+                    <h2>GitHub</h2>
+                    <p>Repos, experiments, prototypes, and technical side quests.</p>
+                </div>
+            </a>
+
+            <a class="link-card tone-cream" href="mailto:clairevlases@gmail.com?subject=Hello%20Claire" target="_blank" rel="noreferrer">
+                <div class="link-card-art">
+                    <span class="link-kicker">direct</span>
+                    <span class="link-glyph">✉</span>
+                </div>
+                <div class="link-card-copy">
+                    <h2>Email</h2>
+                    <p>The best place for real conversations, opportunities, and introductions.</p>
+                </div>
+            </a>
+
+            <a class="link-card tone-gold" href="../assets/Vlases, Claire_Resume_May 2024.pdf" target="_blank" rel="noreferrer">
+                <div class="link-card-art">
+                    <span class="link-kicker">document</span>
+                    <span class="link-glyph">TXT</span>
+                </div>
+                <div class="link-card-copy">
+                    <h2>Resume</h2>
+                    <p>A compact overview of roles, experience, and accomplishments.</p>
+                </div>
+            </a>
+        </section>
     </div>
-    <script src="../js/scroll.js"></script>
 </body>
 </html>
