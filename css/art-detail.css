@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'PX Sans';
+    src: url('../assets/fonts/px_sans_nouveaux.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 14px;
+    background: #c0c0c0;
+    color: #111;
+    font-family: 'Courier New', monospace;
+}
+
+p,
+span,
+h1 {
+    font-family: 'Courier New', monospace;
+}
+
+.art-detail {
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 10px;
+    padding: 18px;
+    background: #fff;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 #000;
+}
+
+.detail-label {
+    margin: 0;
+    font-family: 'PX Sans', 'Courier New', monospace;
+    font-size: 9px;
+    color: #000080;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.art-detail h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.art-detail p:last-child {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.tone-rose { background: linear-gradient(135deg, #edd0df, #fff5fa 72%); }
+.tone-sage { background: linear-gradient(135deg, #dce8cf, #f6fdf2 72%); }
+.tone-wheat { background: linear-gradient(135deg, #ead8b4, #fff8ec 72%); }
+.tone-sky { background: linear-gradient(135deg, #c9dbf3, #f3f8ff 72%); }
+.tone-plum { background: linear-gradient(135deg, #d9ccec, #f8f3ff 72%); }
+.tone-gold { background: linear-gradient(135deg, #f0dfab, #fffbe9 72%); }

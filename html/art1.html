@@ -3,68 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/gallery.css">
-    <title>Art Projects Gallery</title>
+    <link rel="stylesheet" href="../css/art-board.css">
+    <title>Art</title>
 </head>
 <body>
-    <div class="gallery-container">
-        <h1>Art Projects Gallery</h1>
-        <p class="gallery-description">Welcome to my virtual gallery. Each piece has been crafted with care, showcasing my creative journey.</p>
-    
-        <!-- Section 1 -->
-        <div id="snowstock-section" class="gallery-section">
-            <h2 class="section-title">Snowstock Designs</h2>
-            <div class="gallery">
-                <!-- Snowstock Frames -->
-                <div class="art-frame ornate size-large">
-                    <img src="../assets/snowstock1.png" alt="Snowstock - Front of Shirt">
-                    <p class="art-caption ornate-caption">Snowstock: Front of Shirt</p>
-                </div>
-                <div class="art-frame ornate size-medium">
-                    <img src="../assets/snowstock2.png" alt="Snowstock - Back of Shirt">
-                    <p class="art-caption ornate-caption">Snowstock: Back of Shirt</p>
-                </div>
-                <div class="art-frame ornate size-small">
-                    <img src="../assets/snowstock3.png" alt="Snowstock Poster">
-                    <p class="art-caption ornate-caption">Snowstock: Poster</p>
-                </div>
+    <div class="art-page">
+        <section class="art-hero">
+            <div class="art-hero-copy">
+                <p class="section-label">// art</p>
+                <h1>Visual work, experiments, and image-making</h1>
+                <p class="hero-note">A board of work across digital art, coding experiments, watercolor, botanical illustration, merch, and other visual side quests.</p>
             </div>
-        </div>
-        
-        <div id="bike-section" class="gallery-section">
-            <h2 class="section-title">Bike Shop Merchandise</h2>
-            <div class="gallery">
-                <!-- Bike Shop Frames -->
-                <div class="art-frame ornate size-medium">
-                    <img src="../assets/Scripps-bikes.png" alt="Scripps Bike Shop">
-                    <p class="art-caption ornate-caption">Scripps Bike Shop</p>
-                </div>
-                <div class="art-frame ornate size-small">
-                    <img src="../assets/uscga.png" alt="USCGA Freestyle Ski Team">
-                    <p class="art-caption ornate-caption">USCGA Freestyle Ski Team</p>
-                </div>
-                <div class="art-frame ornate size-large">
-                    <img src="../assets/UC-bike.png" alt="UC Bike">
-                    <p class="art-caption ornate-caption">UC Bike</p>
-                </div>
-            </div>
-        </div>
-        
-        <div id="published-section" class="gallery-section">
-            <h2 class="section-title">Published Work</h2>
-            <div class="gallery">
-                <!-- Published Work Frames -->
-                <div class="art-frame ornate size-medium">
-                    <a href="../assets/Final-CWF.pdf" target="_blank">
-                        <img src="../assets/cwf-front-page.png" alt="Wildflowers of Montana">
-                    </a>
-                    <p class="art-caption ornate-caption">Published Book: Wildflowers of Montana</p>
-                </div>
-            </div>
-        </div>
-        
+        </section>
 
-    
-    <script src="../js/gallery.js"></script>
+        <section class="art-block">
+            <div class="section-heading">
+                <p class="section-label">// art board</p>
+                <p class="section-note">A visual board of pieces, moods, mediums, and experiments.</p>
+            </div>
+
+            <div class="art-board">
+                <div class="art-column">
+                    <button type="button" class="art-tile tile-tall tone-rose" onclick="window.parent.openPopup('html/art/digital.html', 760, 620)">
+                        <div class="tile-art"><span class="tile-kicker">digital</span></div>
+                        <div class="tile-copy"><h2>dream fragment</h2></div>
+                    </button>
+                    <button type="button" class="art-tile tile-medium tone-sage" onclick="window.parent.openPopup('html/art/coding-art.html', 760, 620)">
+                        <div class="tile-art"><span class="tile-kicker">coding</span></div>
+                        <div class="tile-copy"><h2>coded texture</h2></div>
+                    </button>
+                    <button type="button" class="art-tile tile-small tone-wheat" onclick="window.parent.openPopup('html/art/watercolor.html', 760, 620)">
+                        <div class="tile-art"><span class="tile-kicker">watercolor</span></div>
+                        <div class="tile-copy"><h2>field study</h2></div>
+                    </button>
+                </div>
+
+                <div class="art-column">
+                    <button type="button" class="art-tile tile-medium tone-plum" onclick="window.parent.openPopup('html/art/merch.html', 760, 620)">
+                        <div class="tile-art"><span class="tile-kicker">merch</span></div>
+                        <div class="tile-copy"><h2>poster/shirt system</h2></div>
+                    </button>
+                    <button type="button" class="art-tile tile-tall tone-sky" onclick="window.parent.openPopup('html/art/botanical.html', 760, 620)">
+                        <div class="tile-art"><span class="tile-kicker">botanical</span></div>
+                        <div class="tile-copy"><h2>wildflower plate</h2></div>
+                    </button>
+                    <button type="button" class="art-tile tile-small tone-gold" onclick="window.parent.openPopup('html/art/published.html', 760, 620)">
+                        <div class="tile-art"><span class="tile-kicker">published</span></div>
+                        <div class="tile-copy"><h2>printed page</h2></div>
+                    </button>
+                </div>
+
+                <div class="art-column">
+                    <button type="button" class="art-tile tile-small tone-rose" onclick="window.parent.openPopup('html/art/digital.html', 760, 620)">
+                        <div class="tile-art"><span class="tile-kicker">digital</span></div>
+                        <div class="tile-copy"><h2>interface collage</h2></div>
+                    </button>
+                    <button type="button" class="art-tile tile-medium tone-plum" onclick="window.parent.openPopup('html/art/merch.html', 760, 620)">
+                        <div class="tile-art"><span class="tile-kicker">graphic</span></div>
+                        <div class="tile-copy"><h2>identity fragments</h2></div>
+                    </button>
+                    <button type="button" class="art-tile tile-tall tone-sage" onclick="window.parent.openPopup('html/art/coding-art.html', 760, 620)">
+                        <div class="tile-art"><span class="tile-kicker">coding</span></div>
+                        <div class="tile-copy"><h2>behavior study</h2></div>
+                    </button>
+                </div>
+
+                <div class="art-column">
+                    <button type="button" class="art-tile tile-tall tone-wheat" onclick="window.parent.openPopup('html/art/watercolor.html', 760, 620)">
+                        <div class="tile-art"><span class="tile-kicker">watercolor</span></div>
+                        <div class="tile-copy"><h2>fruit study</h2></div>
+                    </button>
+                    <button type="button" class="art-tile tile-small tone-sky" onclick="window.parent.openPopup('html/art/botanical.html', 760, 620)">
+                        <div class="tile-art"><span class="tile-kicker">botanical</span></div>
+                        <div class="tile-copy"><h2>specimen sheet</h2></div>
+                    </button>
+                    <button type="button" class="art-tile tile-medium tone-gold" onclick="window.parent.openPopup('html/art/published.html', 760, 620)">
+                        <div class="tile-art"><span class="tile-kicker">published</span></div>
+                        <div class="tile-copy"><h2>book spread</h2></div>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
