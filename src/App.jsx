@@ -58,6 +58,12 @@ export default function App() {
   };
 
   const handleMenuOpen = (item) => {
+    if (item.externalUrl) {
+      window.open(item.externalUrl, item.target ?? '_blank', item.target === '_blank' ? 'noopener,noreferrer' : undefined);
+      setStartOpen(false);
+      return;
+    }
+
     openWindow(item);
     setStartOpen(false);
   };
