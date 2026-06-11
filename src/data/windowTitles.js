@@ -1,4 +1,5 @@
 export const windowTitles = {
+  'html/archive.html': 'Archive',
   'html/about.html': 'About',
   'html/art1.html': 'Art',
   'html/dino.html': 'Dino Game',
