@@ -8,42 +8,61 @@
 </head>
 <body>
     <div class="case-page">
-        <section class="case-hero tone-green">
-            <p class="case-kicker">// build + art</p>
-            <h1>Newspeak Dictionary</h1>
-            <p class="case-hook">I wanted to find the words AI had hollowed out. What I found instead was that the literal meanings were still there — waiting for the right literary framing to call them back.</p>
+        <section class="case-launchpad">
+            <div class="case-launchpad-grid">
+                <h1 class="launchpad-title">Newspeak Dictionary</h1>
+                <div class="launchpad-panel">
+                    <div class="launchpad-meta">
+                        <div class="launchpad-row"><span class="launchpad-label">Role</span><span class="launchpad-value">Solo developer · Artist</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Tools</span><span class="launchpad-value">Next.js · Modal · Gemma · SAE steering</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Time</span><span class="launchpad-value">Spring 2025</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Team</span><span class="launchpad-value">Advanced Creative Code capstone</span></div>
+                    </div>
+                    <div class="launchpad-actions">
+                        <span class="launchpad-chip">Language + AI</span>
+                        <span class="launchpad-chip">Creative code</span>
+                    </div>
+                </div>
+                <div class="launchpad-panel launchpad-abstract">
+                    <span class="launchpad-abstract-label">Abstract</span>
+                    <div>
+                        <p>Newspeak Dictionary is a web experience about what AI language models do to words with physical and ecological weight. Through model steering, writing, and interface design, it asks what gets flattened, what stays latent, and how literary framing can call meaning back.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="case-meta case-box">
-            <div class="meta-chip"><strong>Role</strong><span>Solo developer / artist</span></div>
-            <div class="meta-chip"><strong>Tools</strong><span>Next.js, Modal, Gemma, SAE steering</span></div>
-            <div class="meta-chip"><strong>Time</strong><span>Spring 2025</span></div>
-            <div class="meta-chip"><strong>Course</strong><span>Advanced Creative Code</span></div>
-        </section>
+        <nav class="process-tracker">
+            <a class="tracker-link" href="#hook">Hook</a>
+            <a class="tracker-link" href="#problem">The Problem</a>
+            <a class="tracker-link" href="#pivot">The Pivot</a>
+            <a class="tracker-link" href="#process">Process</a>
+            <a class="tracker-link" href="#artifacts">Artifacts</a>
+            <a class="tracker-link" href="#learning">What I Learned</a>
+        </nav>
 
-        <section class="case-box">
+        <section class="case-box" id="hook">
             <p class="case-label">// hook</p>
             <div class="case-copy">
                 <p>This project probes words with physical and ecological weight — words like <em>soil</em>, <em>root</em>, and <em>bloom</em> — to ask what large language models default to, what they forget, and what can be recovered through framing.</p>
             </div>
         </section>
 
-        <section class="case-grid">
-            <section class="case-box">
-                <p class="case-label">// the problem</p>
-                <div class="case-copy">
-                    <p>AI prose often flattens words that should feel sensory, local, and embodied. The initial thesis was that AI had stripped them down. The more interesting discovery was that the meanings were still latent inside the model.</p>
-                </div>
-            </section>
-            <section class="case-box">
-                <p class="case-label">// the pivot</p>
-                <div class="case-copy">
-                    <p>The project got better when the thesis changed. Instead of proving loss, it became an experiment in retrieval: how technical steering and literary framing could surface something richer.</p>
-                </div>
-            </section>
+        <section class="case-box" id="problem">
+            <p class="case-label">// the problem</p>
+            <div class="case-copy">
+                <p>AI prose often flattens words that should feel sensory, local, and embodied. The initial thesis was that AI had stripped them down. The more interesting discovery was that the meanings were still latent inside the model.</p>
+            </div>
         </section>
 
-        <section class="case-box">
+        <section class="case-box" id="pivot">
+            <p class="case-label">// the pivot</p>
+            <div class="case-copy">
+                <p>The project got better when the thesis changed. Instead of proving loss, it became an experiment in retrieval: how technical steering and literary framing could surface something richer.</p>
+            </div>
+        </section>
+
+        <section class="case-box" id="process">
             <p class="case-label">// process</p>
             <ul class="case-list">
                 <li>Started with GPT-2 / GemmaScope exploration.</li>
@@ -53,7 +72,7 @@
             </ul>
         </section>
 
-        <section class="case-box">
+        <section class="case-box" id="artifacts">
             <p class="case-label">// artifacts</p>
             <div class="artifact-grid">
                 <article class="artifact-card tone-green">
@@ -71,12 +90,13 @@
             </div>
         </section>
 
-        <section class="case-box">
+        <section class="case-box" id="learning">
             <p class="case-label">// what i learned</p>
             <div class="case-copy">
                 <p>The strongest version of this project is not anti-AI in a broad way. It is more precise than that: a study in how model behavior, interface framing, and literary context shape meaning together.</p>
             </div>
         </section>
     </div>
+    <script src="../../js/project-scrollspy.js"></script>
 </body>
 </html>

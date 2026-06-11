@@ -1,15 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
   const links = Array.from(document.querySelectorAll('.tracker-link'));
-  const sections = links
+  const items = links
     .map((link) => {
       const id = link.getAttribute('href')?.replace('#', '');
-      return id ? document.getElementById(id) : null;
+      const section = id ? document.getElementById(id) : null;
+      return section ? { link, section, id } : null;
     })
     .filter(Boolean);
 
-  if (!links.length || !sections.length) {
+  if (!links.length || !items.length) {
     return;
   }
+
+  const tracker = document.querySelector('.process-tracker');
+
+  const normalizeLabel = (text) =>
+    text
+      .replace(/^\/\//, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+  items.forEach(({ link, section }) => {
+    const explicitLabel = section.dataset.navLabel;
+    const sectionLabel = section.querySelector('.case-label');
+    const derivedLabel = explicitLabel || (sectionLabel ? normalizeLabel(sectionLabel.textContent || '') : '');
+
+    if (derivedLabel) {
+      link.textContent = derivedLabel;
+    }
+  });
 
   const setActive = (id) => {
     links.forEach((link) => {
@@ -17,22 +36,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  const getOffset = () => (tracker ? tracker.getBoundingClientRect().height + 18 : 24);
 
-      if (visible?.target?.id) {
-        setActive(visible.target.id);
+  const updateActiveFromScroll = () => {
+    const offset = getOffset();
+    let currentId = items[0].id;
+
+    items.forEach(({ section, id }) => {
+      const top = section.getBoundingClientRect().top;
+      if (top - offset <= 0) {
+        currentId = id;
       }
-    },
-    {
-      rootMargin: '-20% 0px -55% 0px',
-      threshold: [0.2, 0.45, 0.7],
-    }
-  );
+    });
 
-  sections.forEach((section) => observer.observe(section));
-  setActive(sections[0].id);
+    setActive(currentId);
+  };
+
+  items.forEach(({ link, section, id }) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      setActive(id);
+
+      const offset = getOffset();
+      const top = window.scrollY + section.getBoundingClientRect().top - offset;
+      window.scrollTo({
+        top,
+        behavior: 'smooth',
+      });
+    });
+  });
+
+  updateActiveFromScroll();
+  window.addEventListener('scroll', updateActiveFromScroll, { passive: true });
+  window.addEventListener('resize', updateActiveFromScroll);
 });

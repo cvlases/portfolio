@@ -40,6 +40,104 @@ body::-webkit-scrollbar-thumb {
     gap: 12px;
 }
 
+.case-launchpad {
+    background: #fff;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    padding: 18px;
+}
+
+.case-launchpad-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.15fr);
+    gap: 18px;
+    align-items: stretch;
+}
+
+.launchpad-title {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 34px;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.launchpad-panel {
+    background: #efefef;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    box-shadow: inset 1px 1px 0 #dfdfdf;
+    padding: 16px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.launchpad-meta {
+    display: grid;
+    gap: 12px;
+    align-content: start;
+}
+
+.launchpad-row {
+    display: grid;
+    grid-template-columns: 74px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+}
+
+.launchpad-label,
+.launchpad-abstract-label {
+    font-family: var(--ui-font);
+    font-size: 10px;
+    color: #000080;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.launchpad-value {
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+.launchpad-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 14px;
+}
+
+.launchpad-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 12px;
+    background: #c0c0c0;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    box-shadow: inset 1px 1px 0 #dfdfdf, 2px 2px 0 #000;
+    font-size: 13px;
+    color: #111;
+    text-decoration: none;
+}
+
+.launchpad-abstract {
+    display: grid;
+    gap: 12px;
+}
+
+.launchpad-abstract p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
 .case-box,
 .case-hero,
 .process-tracker {
@@ -148,6 +246,10 @@ body::-webkit-scrollbar-thumb {
 
 .case-box {
     padding: 18px;
+}
+
+.case-box[id] {
+    scroll-margin-top: 74px;
 }
 
 .case-box p:last-child,
@@ -303,6 +405,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 900px) {
+    .case-launchpad-grid,
     .case-meta,
     .artifact-grid,
     .case-grid {
@@ -315,11 +418,30 @@ body::-webkit-scrollbar-thumb {
         padding: 10px;
     }
 
+    .case-launchpad-grid,
     .case-meta,
     .artifact-grid,
     .case-grid,
     .image-pair {
         grid-template-columns: 1fr;
+    }
+
+    .launchpad-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .launchpad-abstract h1 {
+        font-size: 29px;
+    }
+
+    .launchpad-title {
+        font-size: 29px;
+    }
+
+    .launchpad-abstract p,
+    .launchpad-value {
+        font-size: 15px;
     }
 
     .case-hero h1 {

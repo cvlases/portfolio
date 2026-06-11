@@ -8,42 +8,61 @@
 </head>
 <body>
     <div class="case-page">
-        <section class="case-hero tone-blue">
-            <p class="case-kicker">// build + art</p>
-            <h1>Portraits of Algorithmic Attention</h1>
-            <p class="case-hook">Saliency maps show you where a neural network is “looking.” This project asks what happens when that attention becomes portraiture instead of pure explanation.</p>
+        <section class="case-launchpad">
+            <div class="case-launchpad-grid">
+                <h1 class="launchpad-title">Portraits of Algorithmic Attention</h1>
+                <div class="launchpad-panel">
+                    <div class="launchpad-meta">
+                        <div class="launchpad-row"><span class="launchpad-label">Role</span><span class="launchpad-value">Solo developer · Artist</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Tools</span><span class="launchpad-value">ComfyUI · Custom saliency node · XAI workflows</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Time</span><span class="launchpad-value">Creative coding experiment</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Team</span><span class="launchpad-value">Just me</span></div>
+                    </div>
+                    <div class="launchpad-actions">
+                        <span class="launchpad-chip">Visual XAI</span>
+                        <span class="launchpad-chip">Portrait study</span>
+                    </div>
+                </div>
+                <div class="launchpad-panel launchpad-abstract">
+                    <span class="launchpad-abstract-label">Abstract</span>
+                    <div>
+                        <p>Portraits of Algorithmic Attention turns saliency and explainability into image-making. Instead of treating neural attention as purely diagnostic, the project makes it visible as portraiture — asking what it means to look at machine attention not just as data, but as a visual medium.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="case-meta case-box">
-            <div class="meta-chip"><strong>Role</strong><span>Solo developer / artist</span></div>
-            <div class="meta-chip"><strong>Tools</strong><span>ComfyUI, custom saliency node</span></div>
-            <div class="meta-chip"><strong>Type</strong><span>Creative coding + XAI</span></div>
-            <div class="meta-chip"><strong>Status</strong><span>Starter page</span></div>
-        </section>
+        <nav class="process-tracker">
+            <a class="tracker-link" href="#what">What It Is</a>
+            <a class="tracker-link" href="#question">The Question</a>
+            <a class="tracker-link" href="#meaning">Why It Matters</a>
+            <a class="tracker-link" href="#process">Process</a>
+            <a class="tracker-link" href="#artifacts">Artifacts</a>
+            <a class="tracker-link" href="#next">Next</a>
+        </nav>
 
-        <section class="case-box">
+        <section class="case-box" id="what">
             <p class="case-label">// what it is</p>
             <div class="case-copy">
                 <p>This project uses a custom-built explainable AI / saliency workflow in ComfyUI to visualize model attention as a form of portraiture. Instead of treating saliency as a technical diagnostic only, it reframes attention as image-making.</p>
             </div>
         </section>
 
-        <section class="case-grid">
-            <section class="case-box">
-                <p class="case-label">// the question</p>
-                <div class="case-copy">
-                    <p>What does it look like when a model “looks” at a face, a body, or a landscape? And how does that change when you present the answer as art rather than just explanation?</p>
-                </div>
-            </section>
-            <section class="case-box">
-                <p class="case-label">// why it matters</p>
-                <div class="case-copy">
-                    <p>The project sits in a sweet spot between creative coding and interpretability. It makes AI attention legible, but it also makes it emotionally and aesthetically legible.</p>
-                </div>
-            </section>
+        <section class="case-box" id="question">
+            <p class="case-label">// the question</p>
+            <div class="case-copy">
+                <p>What does it look like when a model “looks” at a face, a body, or a landscape? And how does that change when you present the answer as art rather than just explanation?</p>
+            </div>
         </section>
 
-        <section class="case-box">
+        <section class="case-box" id="meaning">
+            <p class="case-label">// why it matters</p>
+            <div class="case-copy">
+                <p>The project sits in a sweet spot between creative coding and interpretability. It makes AI attention legible, but it also makes it emotionally and aesthetically legible.</p>
+            </div>
+        </section>
+
+        <section class="case-box" id="process">
             <p class="case-label">// process</p>
             <ul class="case-list">
                 <li>Built or adapted a custom saliency node inside ComfyUI.</li>
@@ -52,7 +71,7 @@
             </ul>
         </section>
 
-        <section class="case-box">
+        <section class="case-box" id="artifacts">
             <p class="case-label">// artifacts</p>
             <div class="artifact-grid">
                 <article class="artifact-card tone-blue">
@@ -70,12 +89,13 @@
             </div>
         </section>
 
-        <section class="case-box">
+        <section class="case-box" id="next">
             <p class="case-label">// next</p>
             <div class="case-copy">
                 <p>This is a great candidate for a highly visual page with minimal prose, especially once the final images and any public links are dropped in.</p>
             </div>
         </section>
     </div>
+    <script src="../../js/project-scrollspy.js"></script>
 </body>
 </html>

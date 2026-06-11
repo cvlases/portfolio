@@ -33,7 +33,7 @@ export const startMenuItems = [
       { key: 'portfolio', label: 'Portfolio', url: 'html/portfolio.html', width: 1000, height: 650 },
       { key: 'planet', label: 'Planet', url: 'html/earth.html', width: 900, height: 620 },
       { key: 'art', label: 'Art', url: 'html/art1.html', width: 980, height: 680 },
-      { key: 'archive', label: 'Archive', url: 'html/archive.html', width: 920, height: 660 },
+      // { key: 'archive', label: 'Archive', url: 'html/archive.html', width: 920, height: 660 },
     ],
   },
 ];

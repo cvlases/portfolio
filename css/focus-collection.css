@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'PX Sans';
+    src: url('../assets/fonts/px_sans_nouveaux.ttf') format('truetype');
+}
+
+:root {
+    --ui-font: 'PX Sans', 'Courier New', monospace;
+    --body-font: 'Courier New', monospace;
+}
+
+body {
+    margin: 0;
+    padding: 14px;
+    background: #c0c0c0;
+    color: #111;
+    font-family: var(--body-font);
+}
+
+.collection-page {
+    display: grid;
+    gap: 12px;
+}
+
+.collection-hero,
+.collection-section {
+    background: #fff;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    padding: 18px 20px;
+}
+
+.collection-kicker,
+.collection-tag,
+.collection-section h2 {
+    font-family: var(--ui-font);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.collection-kicker {
+    margin: 0 0 8px 0;
+    font-size: 9px;
+    color: #000080;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.collection-hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 31px;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.collection-hero p:not(.collection-kicker),
+.collection-card p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.collection-section h2 {
+    margin: 0 0 12px 0;
+    font-size: 10px;
+    color: #000080;
+}
+
+.collection-card {
+    display: grid;
+    gap: 8px;
+    align-content: start;
+    min-height: 148px;
+    padding: 14px;
+    background: #f8f8f8;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    box-shadow: 2px 2px 0 #000;
+}
+
+.collection-card--link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.collection-card--link:hover {
+    box-shadow: 3px 3px 0 #000;
+}
+
+.collection-card--link:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 #000;
+}
+
+.collection-card h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.collection-tag {
+    font-size: 9px;
+    color: #000080;
+}
+
+.collection-note {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.tone-blue {
+    background: linear-gradient(135deg, #dce7ff, #fafcff 70%);
+}
+
+.tone-green {
+    background: linear-gradient(135deg, #dcefd9, #f7fff7 70%);
+}
+
+.tone-lilac {
+    background: linear-gradient(135deg, #e7defd, #fcfbff 70%);
+}
+
+.tone-peach {
+    background: linear-gradient(135deg, #f3decf, #fff8f3 70%);
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 10px;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+}
