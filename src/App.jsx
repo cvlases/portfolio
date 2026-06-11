@@ -68,6 +68,7 @@ export default function App() {
         startOpen={startOpen}
         onToggleStart={() => setStartOpen((value) => !value)}
         onOpenMenuItem={handleMenuOpen}
+        onFocusTaskbarItem={bringToFront}
         onCloseAll={() => {
           closeAll();
           setStartOpen(false);

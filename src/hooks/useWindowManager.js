@@ -1,6 +1,7 @@
-import { useCallback, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { windowTitles } from '../data/windowTitles';
 import { getInitialWindowRect } from '../utils/getInitialWindowRect';
+import { fitWindowRect } from '../utils/windowBounds';
 
 function getTitle(url) {
   return windowTitles[url] ?? url.split('/').pop()?.replace('.html', '') ?? 'Window';
@@ -49,16 +50,29 @@ export function useWindowManager() {
 
   const updateWindowPosition = useCallback((id, position) => {
     setWindows((current) =>
-      current.map((item) => (item.id === id ? { ...item, ...position } : item))
+      current.map((item) => (item.id === id ? { ...item, ...fitWindowRect({ ...item, ...position }) } : item))
     );
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindows((current) => current.map((item) => ({ ...item, ...fitWindowRect(item) })));
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const taskbarItems = useMemo(
-    () =>
-      windows.map((item) => ({
+    () => {
+      const activeZIndex = Math.max(0, ...windows.map((item) => item.zIndex));
+
+      return windows.map((item) => ({
         id: item.id,
         label: item.title,
-      })),
+        isActive: item.zIndex === activeZIndex,
+      }));
+    },
     [windows]
   );
 

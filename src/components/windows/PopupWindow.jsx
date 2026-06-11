@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import LegacyFrame from './LegacyFrame';
+import { fitWindowRect } from '../../utils/windowBounds';
 
 export default function PopupWindow({
   windowItem,
@@ -26,14 +27,15 @@ export default function PopupWindow({
         return;
       }
 
-      const nextLeft = moveEvent.clientX - dragState.current.offsetX;
-      const nextTop = moveEvent.clientY - dragState.current.offsetY;
-      const maxLeft = Math.max(0, window.innerWidth - windowItem.width);
-      const maxTop = Math.max(0, window.innerHeight - windowItem.height - 40);
+      const nextRect = fitWindowRect({
+        ...windowItem,
+        left: moveEvent.clientX - dragState.current.offsetX,
+        top: moveEvent.clientY - dragState.current.offsetY,
+      });
 
       onMove(windowItem.id, {
-        left: Math.max(0, Math.min(maxLeft, nextLeft)),
-        top: Math.max(0, Math.min(maxTop, nextTop)),
+        left: nextRect.left,
+        top: nextRect.top,
       });
     };
 

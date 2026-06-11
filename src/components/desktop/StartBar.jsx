@@ -1,6 +1,13 @@
 import { startMenuItems } from '../../data/startMenuItems';
 
-export default function StartBar({ startOpen, onToggleStart, onOpenMenuItem, onCloseAll, taskbarItems }) {
+export default function StartBar({
+  startOpen,
+  onToggleStart,
+  onOpenMenuItem,
+  onCloseAll,
+  onFocusTaskbarItem,
+  taskbarItems,
+}) {
   return (
     <footer className="start-bar">
       {startOpen ? (
@@ -22,9 +29,14 @@ export default function StartBar({ startOpen, onToggleStart, onOpenMenuItem, onC
 
       <div className="taskbar-windows">
         {taskbarItems.map((item) => (
-          <div key={item.id} className="taskbar-window-pill">
+          <button
+            key={item.id}
+            type="button"
+            className={`taskbar-window-pill${item.isActive ? ' is-active' : ''}`}
+            onClick={() => onFocusTaskbarItem(item.id)}
+          >
             {item.label}
-          </div>
+          </button>
         ))}
       </div>
     </footer>
