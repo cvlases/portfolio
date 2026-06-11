@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import DesktopIcons from './components/desktop/DesktopIcons';
 import StartBar from './components/desktop/StartBar';
 import PopupWindow from './components/windows/PopupWindow';
@@ -31,6 +31,14 @@ export default function App() {
 
   useExposeLegacyPopup(openWindow, closeAll);
   useGhostCursor();
+
+  useEffect(() => {
+    const aboutIcon = desktopIcons.find((icon) => icon.key === 'about');
+
+    if (aboutIcon) {
+      openWindow(aboutIcon);
+    }
+  }, [openWindow]);
 
   const handleOpenIcon = (icon) => {
     setSelectedIcon(icon.key);
