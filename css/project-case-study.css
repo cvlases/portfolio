@@ -167,6 +167,11 @@ body::-webkit-scrollbar-thumb {
     gap: 12px;
 }
 
+.case-grid--intro {
+    align-items: start;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+}
+
 .artifact-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -195,6 +200,57 @@ body::-webkit-scrollbar-thumb {
 
 .artifact-card h3 {
     font-size: 19px;
+}
+
+.artifact-figure,
+.full-bleed-figure,
+.logo-figure {
+    margin: 0;
+}
+
+.artifact-figure,
+.full-bleed-figure {
+    background: #f7f7f7;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    box-shadow: 2px 2px 0 #000;
+    overflow: hidden;
+}
+
+.artifact-figure img,
+.full-bleed-figure img,
+.logo-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-pair {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    align-items: start;
+}
+
+.artifact-figure {
+    min-height: 0;
+    align-self: start;
+}
+
+.artifact-figure img {
+    height: auto;
+    object-fit: contain;
+}
+
+.full-bleed-figure {
+    margin-top: 14px;
+}
+
+.logo-figure {
+    margin-top: 14px;
+    max-width: 260px;
 }
 
 .artifact-card p,
@@ -261,7 +317,8 @@ body::-webkit-scrollbar-thumb {
 
     .case-meta,
     .artifact-grid,
-    .case-grid {
+    .case-grid,
+    .image-pair {
         grid-template-columns: 1fr;
     }
 
