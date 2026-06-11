@@ -95,3 +95,8 @@
   border-bottom: 1px solid #fff;
   box-shadow: inset 1px 1px 0 #808080;
 }
+
+.taskbar-window-pill.is-minimized {
+  color: #444;
+  box-shadow: none;
+}

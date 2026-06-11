@@ -39,3 +39,14 @@ export function fitWindowRect(rect) {
     top: Math.min(Math.max(rect.top, bounds.minTop), maxTop),
   };
 }
+
+export function getMaximizedWindowRect() {
+  const bounds = getWindowBounds();
+
+  return {
+    left: bounds.minLeft,
+    top: bounds.minTop,
+    width: bounds.maxWidth,
+    height: bounds.maxHeight,
+  };
+}

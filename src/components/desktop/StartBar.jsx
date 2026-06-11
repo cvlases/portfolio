@@ -32,7 +32,8 @@ export default function StartBar({
           <button
             key={item.id}
             type="button"
-            className={`taskbar-window-pill${item.isActive ? ' is-active' : ''}`}
+            data-taskbar-id={item.id}
+            className={`taskbar-window-pill${item.isActive ? ' is-active' : ''}${item.isMinimized ? ' is-minimized' : ''}`}
             onClick={() => onFocusTaskbarItem(item.id)}
           >
             {item.label}

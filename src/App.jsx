@@ -14,7 +14,19 @@ function isMobileViewport() {
 export default function App() {
   const [selectedIcon, setSelectedIcon] = useState(null);
   const [startOpen, setStartOpen] = useState(false);
-  const { windows, taskbarItems, openWindow, closeWindow, closeAll, bringToFront, updateWindowPosition } =
+  const {
+    windows,
+    taskbarItems,
+    openWindow,
+    closeWindow,
+    closeAll,
+    bringToFront,
+    updateWindowPosition,
+    minimizeWindow,
+    toggleMaximizeWindow,
+    restoreWindowFromTaskbar,
+    clearTaskbarRestore,
+  } =
     useWindowManager();
 
   useExposeLegacyPopup(openWindow, closeAll);
@@ -53,13 +65,16 @@ export default function App() {
       />
 
       <div className="window-layer">
-        {windows.map((windowItem) => (
+        {windows.filter((windowItem) => !windowItem.minimized).map((windowItem) => (
           <PopupWindow
             key={windowItem.id}
             windowItem={windowItem}
             onClose={closeWindow}
             onFocus={bringToFront}
             onMove={updateWindowPosition}
+            onMinimize={minimizeWindow}
+            onToggleMaximize={toggleMaximizeWindow}
+            onRestoreAnimationComplete={clearTaskbarRestore}
           />
         ))}
       </div>
@@ -68,7 +83,7 @@ export default function App() {
         startOpen={startOpen}
         onToggleStart={() => setStartOpen((value) => !value)}
         onOpenMenuItem={handleMenuOpen}
-        onFocusTaskbarItem={bringToFront}
+        onFocusTaskbarItem={restoreWindowFromTaskbar}
         onCloseAll={() => {
           closeAll();
           setStartOpen(false);

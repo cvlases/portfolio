@@ -10,6 +10,8 @@
   border: 2px solid black;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
   pointer-events: auto;
+  transform-origin: top left;
+  transition: transform 220ms cubic-bezier(0.18, 0.72, 0.2, 1), opacity 220ms ease-out;
 }
 
 .popup-header {
@@ -17,21 +19,26 @@
   justify-content: space-between;
   align-items: center;
   gap: 8px;
-  padding: 2px 4px;
-  background: #808080;
+  padding: 3px 4px 3px 5px;
+  background: #000080;
   cursor: move;
 }
 
 .popup-title {
   color: white;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
-.popup-close-button {
-  width: 24px;
-  height: 22px;
+.popup-controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.popup-control-button {
+  width: 22px;
+  height: 20px;
   background: #c0c0c0;
-  color: #000;
   border-top: 1px solid #fff;
   border-left: 1px solid #fff;
   border-right: 1px solid #808080;
@@ -40,6 +47,43 @@
   align-items: center;
   justify-content: center;
   padding: 0;
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.popup-control-button:active {
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.popup-control-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+}
+
+.popup-control-button--maximize.is-active {
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.popup-control-button--minimize .popup-control-icon {
+  background-image: url('/assets/icons/minimize-window.png');
+}
+
+.popup-control-button--maximize .popup-control-icon {
+  background-image: url('/assets/icons/maximize-window.png');
+}
+
+.popup-control-button--close .popup-control-icon {
+  background-image: url('/assets/icons/close.png');
 }
 
 .popup-iframe {
