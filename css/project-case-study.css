@@ -115,6 +115,7 @@ body::-webkit-scrollbar-thumb {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-family: var(--body-font);
     padding: 9px 12px;
     background: #c0c0c0;
     border-top: 1px solid #fff;
@@ -161,9 +162,11 @@ body::-webkit-scrollbar-thumb {
 
 .case-kicker,
 .case-label {
-    margin: 0 0 10px 0;
-    font-size: 9px;
+    margin: 0 0 18px 0;
+    font-size: 13px;
     color: #000080;
+    font-weight: bold;
+    letter-spacing: 2.2px;
 }
 
 .case-hero h1 {
@@ -245,7 +248,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .case-box {
-    padding: 18px;
+    padding: 22px 24px;
 }
 
 .case-box[id] {
@@ -263,6 +266,75 @@ body::-webkit-scrollbar-thumb {
     line-height: 1.65;
 }
 
+.case-copy--spaced {
+    display: grid;
+    gap: 14px;
+}
+
+.article-flow {
+    width: min(100%, 980px);
+    margin: 0 auto;
+    display: grid;
+    gap: 24px;
+    justify-items: start;
+}
+
+.article-flow p {
+    margin: 0;
+    font-size: clamp(15px, 0.7rem + 0.6vw, 20px);
+    line-height: 1.78;
+    max-width: 43em;
+    letter-spacing: 0.005em;
+}
+
+.article-card {
+    margin: 0;
+    width: 100%;
+    max-width: 460px;
+    justify-self: start;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #c0c0c0;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    box-shadow: inset 1px 1px 0 #000, 3px 3px 0 #000;
+}
+
+.article-card--stack {
+    max-width: 500px;
+}
+
+.article-card--medium {
+    max-width: 380px;
+}
+
+.article-card--wide {
+    max-width: 540px;
+}
+
+.article-card--double {
+    max-width: 420px;
+}
+
+.article-card--logo {
+    max-width: 220px;
+}
+
+.article-card-grid {
+    display: grid;
+    gap: 10px;
+}
+
+.article-card-grid--stack {
+    grid-template-columns: 1fr;
+}
+
+.article-card-grid--double {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .case-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -271,7 +343,13 @@ body::-webkit-scrollbar-thumb {
 
 .case-grid--intro {
     align-items: start;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+    grid-template-columns: minmax(0, 1.12fr) minmax(340px, 0.88fr);
+}
+
+.case-grid--detail {
+    align-items: start;
+    grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+    margin-top: 14px;
 }
 
 .artifact-grid {
@@ -312,7 +390,7 @@ body::-webkit-scrollbar-thumb {
 
 .artifact-figure,
 .full-bleed-figure {
-    background: #f7f7f7;
+    background: #d6d6d6;
     border-top: 1px solid #fff;
     border-left: 1px solid #fff;
     border-right: 1px solid #808080;
@@ -329,20 +407,46 @@ body::-webkit-scrollbar-thumb {
     height: auto;
 }
 
-.image-pair {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-    align-items: start;
-}
-
 .artifact-figure {
     min-height: 0;
     align-self: start;
+    padding: 9px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .artifact-figure img {
     height: auto;
+    object-fit: contain;
+}
+
+.artifact-figure--inset {
+    box-sizing: border-box;
+}
+
+.artifact-screen {
+    background: #fff;
+    padding: 8px;
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    box-shadow: inset 1px 1px 0 #000;
+}
+
+.artifact-screen img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
+
+.story-rail .artifact-screen img {
+    max-height: 180px;
+    object-fit: contain;
+}
+
+.story-rail--stack .artifact-screen img {
+    max-height: 96px;
     object-fit: contain;
 }
 
@@ -411,6 +515,14 @@ body::-webkit-scrollbar-thumb {
     .case-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .article-flow {
+        width: min(100%, 760px);
+    }
+
+    .case-box {
+        padding: 20px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -421,9 +533,38 @@ body::-webkit-scrollbar-thumb {
     .case-launchpad-grid,
     .case-meta,
     .artifact-grid,
-    .case-grid,
-    .image-pair {
+    .case-grid {
         grid-template-columns: 1fr;
+    }
+
+    .article-card,
+    .article-card--stack,
+    .article-card--medium,
+    .article-card--wide,
+    .article-card--double,
+    .article-card--logo {
+        max-width: 100%;
+    }
+
+    .article-card-grid--double {
+        grid-template-columns: 1fr;
+    }
+
+    .article-flow p {
+        font-size: 16px;
+        line-height: 1.68;
+        max-width: none;
+    }
+
+    .case-label {
+        margin-bottom: 14px;
+        font-size: 12px;
+    }
+
+    .article-flow p {
+        font-size: 17px;
+        line-height: 1.72;
+        max-width: none;
     }
 
     .launchpad-row {
