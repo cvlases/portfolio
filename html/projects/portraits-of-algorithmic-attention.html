@@ -13,86 +13,148 @@
                 <h1 class="launchpad-title">Portraits of Algorithmic Attention</h1>
                 <div class="launchpad-panel">
                     <div class="launchpad-meta">
-                        <div class="launchpad-row"><span class="launchpad-label">Role</span><span class="launchpad-value">Solo developer · Artist</span></div>
-                        <div class="launchpad-row"><span class="launchpad-label">Tools</span><span class="launchpad-value">ComfyUI · Custom saliency node · XAI workflows</span></div>
-                        <div class="launchpad-row"><span class="launchpad-label">Time</span><span class="launchpad-value">Creative coding experiment</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Role</span><span class="launchpad-value">(Solo) creative coding project</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Tools</span><span class="launchpad-value">ComfyUI · PyTorch · PAIR Saliency · Python</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Time</span><span class="launchpad-value">February 2026</span></div>
                         <div class="launchpad-row"><span class="launchpad-label">Team</span><span class="launchpad-value">Just me</span></div>
                     </div>
                     <div class="launchpad-actions">
-                        <span class="launchpad-chip">Visual XAI</span>
-                        <span class="launchpad-chip">Portrait study</span>
+                        <a class="launchpad-chip" href="https://github.com/cvlases/creative-code-comfyui" target="_blank" rel="noreferrer">View Github</a>
+                        <a class="launchpad-chip" href="https://registry.comfy.org/nodes/creative_code" target="_blank" rel="noreferrer">Download Comfy Node</a>
                     </div>
                 </div>
                 <div class="launchpad-panel launchpad-abstract">
                     <span class="launchpad-abstract-label">Abstract</span>
                     <div>
-                        <p>Portraits of Algorithmic Attention turns saliency and explainability into image-making. Instead of treating neural attention as purely diagnostic, the project makes it visible as portraiture — asking what it means to look at machine attention not just as data, but as a visual medium.</p>
+                        <p>Portraits of Algorithmic Attention turns saliency mapping into image-making. Instead of treating neural attention as purely diagnostic, the project makes it visible as portraiture — asking what it means to look at machine attention not just as data, but as a visual medium.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <nav class="process-tracker">
-            <a class="tracker-link" href="#what">What It Is</a>
-            <a class="tracker-link" href="#question">The Question</a>
-            <a class="tracker-link" href="#meaning">Why It Matters</a>
-            <a class="tracker-link" href="#process">Process</a>
-            <a class="tracker-link" href="#artifacts">Artifacts</a>
-            <a class="tracker-link" href="#next">Next</a>
+            <a class="tracker-link" href="#understand">Understand</a>
+            <a class="tracker-link" href="#define">Define</a>
+            <a class="tracker-link" href="#design">Design</a>
+            <a class="tracker-link" href="#develop">Develop</a>
+            <a class="tracker-link" href="#validate">Validate</a>
+            <a class="tracker-link" href="#exhibit">Exhibit</a>
         </nav>
 
-        <section class="case-box" id="what">
-            <p class="case-label">// what it is</p>
-            <div class="case-copy">
-                <p>This project uses a custom-built explainable AI / saliency workflow in ComfyUI to visualize model attention as a form of portraiture. Instead of treating saliency as a technical diagnostic only, it reframes attention as image-making.</p>
+        <section class="case-box" id="understand">
+            <p class="case-label">// understand</p>
+            <figure class="feature-figure feature-figure--lead">
+                <div class="artifact-screen">
+                    <img src="../../assets/images/project_images/algorithmic_attention/flower-three.png" alt="Large saliency portrait output over a flower image">
+                </div>
+                <figcaption>One of the earliest outputs that made the project click for me: a saliency map becoming a portrait, not just a diagnostic.</figcaption>
+            </figure>
+            <div class="editorial-flow">
+                <div class="editorial-beat editorial-beat--top">
+                    <figure class="editorial-media">
+                        <div class="artifact-screen">
+                            <img src="../../assets/images/project_images/algorithmic_attention/saliency_map.png" alt="Saliency map example related to Katelyn Morrison's work">
+                        </div>
+                        <figcaption>Saliency mapping as a visual explanation method — the bridge between interpretability research and this art project.</figcaption>
+                    </figure>
+                    <div class="editorial-copy case-copy">
+                        <p class="editorial-subhead">Why Start Here</p>
+                        <p>I've been interested in <a href="https://github.com/PAIR-code/saliency" target="_blank" rel="noreferrer"><span class="editorial-highlight">Explainable AI (XAI)</span></a> for some time now, and wanted to actually understand how it works.</p>
+                        <p>XAI is often described as “a set of processes and methods that allows human users to comprehend and trust the results and output created by machine learning algorithms.” In practice, I was especially drawn to saliency mapping — a visual way to show what areas of an image are most significant for ML classification.</p>
+                        <p>I do research with PhD student <a href="https://cmu-vis-2021.github.io/Insightful-Saliency-Maps/" target="_blank" rel="noreferrer">Katelyn Morrison</a>, and learned about her work with saliency mapping. Seeing those visual explanations immediately made me wonder: <span class="editorial-highlight">could I make art using ML classifications?</span></p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="case-box" id="question">
-            <p class="case-label">// the question</p>
-            <div class="case-copy">
-                <p>What does it look like when a model “looks” at a face, a body, or a landscape? And how does that change when you present the answer as art rather than just explanation?</p>
+        <section class="case-box" id="define">
+            <p class="case-label">// define</p>
+            <div class="case-copy case-copy--spaced">
+                <div class="question-callout">
+                    <p class="question-callout-strong">The core question: when a model classifies an image, which pixels drove that decision?</p>
+                    <p class="question-callout-secondary">And underneath that, a harder question: what does it mean to render that attention as something you can look at?</p>
+                </div>
+                <p>My work is about making the classification more visible, and asking what it reveals about how these systems actually <span class="editorial-highlight">see — and don't see — the world</span>.</p>
             </div>
         </section>
 
-        <section class="case-box" id="meaning">
-            <p class="case-label">// why it matters</p>
-            <div class="case-copy">
-                <p>The project sits in a sweet spot between creative coding and interpretability. It makes AI attention legible, but it also makes it emotionally and aesthetically legible.</p>
+        <section class="case-box" id="design">
+            <p class="case-label">// design</p>
+            <div class="editorial-flow">
+                <div class="editorial-beat editorial-beat--top">
+                    <figure class="editorial-media">
+                        <div class="artifact-screen">
+                            <img src="../../assets/images/project_images/algorithmic_attention/mask_only.png" alt="Colored saliency map over an image classified as Labrador retriever">
+                        </div>
+                        <figcaption>Colored saliency map of an input image. Classification: Labrador retriever.</figcaption>
+                    </figure>
+                    <div class="editorial-copy case-copy">
+                        <p class="editorial-subhead">Expose the Decision</p>
+                        <p>The tool needed to expose <span class="editorial-highlight">two layers of decision-making</span>: the model, meaning which network is doing the classifying, and the method, meaning how we ask it to explain itself.</p>
+                        <p>I selected seven convolutional neural networks trained on ImageNet, a dataset of 1.2 million images across 1,000 categories. CNNs are useful for saliency visualization because you can calculate the gradient to measure: <span class="editorial-highlight">if I changed this pixel slightly, how much would the model's confidence change?</span> High gradient means the model is paying attention to that pixel.</p>
+                    </div>
+                </div>
+
+                <div class="editorial-beat">
+                    <figure class="editorial-media editorial-media--compact">
+                        <div class="artifact-screen">
+                            <img src="../../assets/images/project_images/algorithmic_attention/flower-three.png" alt="Additional saliency portrait output with layered coloration">
+                        </div>
+                        <figcaption>Different architectures produce different visual personalities of attention.</figcaption>
+                    </figure>
+                    <div class="editorial-copy case-copy">
+                        <p class="editorial-subhead">Model Personalities</p>
+                        <p>The models differ in architecture, which changes the <span class="editorial-highlight">character of their attention</span>; where they look, how diffuse or concentrated it is, and how coarse or fine-grained the results feel.</p>
+                        <p>VGG16 and VGG19 produce coarse, surveillance-like sweeps. ResNet50 and ResNet101 produce more semantically coherent maps that better reflect what the model actually used to decide. DenseNet121 creates distributed, multi-scale patterns with a kind of collective memory quality. InceptionV3 can look almost fractal. MobileNetV3, optimized for minimal compute, tends to fixate on single small regions — the cheapest path to a confident classification.</p>
+                        <p>For saliency methods, I included six options ranging from <span class="editorial-highlight">Vanilla Gradients</span> to <span class="editorial-highlight">XRAI</span> to <span class="editorial-highlight">Guided IG</span>. Each asks the model to explain itself differently, and gets a different answer. Finally, ten composition modes control how the saliency map is placed back onto the image. The one I find most conceptually interesting is invert, which flips the frame entirely to show what the algorithm ignores instead of what it sees.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="case-box" id="process">
-            <p class="case-label">// process</p>
-            <ul class="case-list">
-                <li>Built or adapted a custom saliency node inside ComfyUI.</li>
-                <li>Used that workflow to generate portraits of model attention.</li>
-                <li>Treated the resulting outputs not just as debug information, but as a visual medium in their own right.</li>
-            </ul>
-        </section>
-
-        <section class="case-box" id="artifacts">
-            <p class="case-label">// artifacts</p>
-            <div class="artifact-grid">
-                <article class="artifact-card tone-blue">
-                    <h3>Portrait Outputs</h3>
-                    <p>The output images should dominate this page once added — they are the main reason to slow down.</p>
-                </article>
-                <article class="artifact-card tone-lilac">
-                    <h3>Workflow Screens</h3>
-                    <p>ComfyUI graph screenshots help explain the technical side without overloading the page with text.</p>
-                </article>
-                <article class="artifact-card tone-peach">
-                    <h3>Interpretability Context</h3>
-                    <p>This section can later connect the artwork to the broader saliency / XAI tooling work.</p>
-                </article>
+        <section class="case-box" id="develop">
+            <p class="case-label">// develop</p>
+            <div class="editorial-flow">
+                <div class="editorial-beat editorial-beat--top">
+                    <figure class="editorial-media">
+                        <div class="artifact-screen">
+                            <img src="../../assets/images/project_images/algorithmic_attention/the_node.png" alt="Custom ComfyUI node for saliency mapping">
+                        </div>
+                        <figcaption>The custom ComfyUI node that turns gradient-based saliency into a reusable workflow tool.</figcaption>
+                    </figure>
+                    <div class="editorial-copy case-copy">
+                        <p class="editorial-subhead">Build the Tool</p>
+                        <p>I created the tool as a custom ComfyUI node set using <span class="editorial-highlight">PyTorch and Google's PAIR Saliency library</span>. The node exposes gradient-based saliency at the workflow level, so any ComfyUI pipeline can use it upstream or downstream of image generation.</p>
+                        <p>I liked ComfyUI as a home for this because it makes the system more accessible to non-technical users and supports batch processing, iteration, and composition naturally.</p>
+                        <p>Parameters include model selection, saliency method, composition mode, colormap, intensity, contrast, threshold, class index override, and SmoothGrad configuration. The <span class="editorial-highlight">class index override</span> is especially useful artistically: it lets you force the model to visualize attention for a class it didn't predict, making the categorical logic visible even when it misfires.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="case-box" id="next">
-            <p class="case-label">// next</p>
-            <div class="case-copy">
-                <p>This is a great candidate for a highly visual page with minimal prose, especially once the final images and any public links are dropped in.</p>
+        <section class="case-box" id="validate">
+            <p class="case-label">// validate</p>
+            <div class="case-copy case-copy--spaced">
+                <p>Running the tool on a range of images revealed attentional differences between models clearly. You can view the <a href="https://github.com/cvlases/creative-code-comfyui" target="_blank" rel="noreferrer">full documentation writeup here</a>. The more interesting validation, though, was conceptual.</p>
+                <p>I ran the tool on a photograph of my dad and sister from about twenty years ago. The models struggled to classify it at all, cycling through predictions like <span class="editorial-highlight">croquet ball, goldfish, mailbox</span>. The attention maps made that confusion visible.</p>
+                <p>These are twelve different saliency mappings of the same image — not just technical outputs, but portraits of a model trying and failing to understand a family photograph.</p>
+            </div>
+            <figure class="feature-figure">
+                <div class="artifact-screen">
+                    <img src="../../assets/images/project_images/algorithmic_attention/dad_and_sis.png" alt="Multiple saliency outputs of a family photograph">
+                </div>
+                <figcaption>Twelve mappings of the same family photo. The classification errors become part of the artwork.</figcaption>
+            </figure>
+        </section>
+
+        <section class="case-box" id="exhibit">
+            <p class="case-label">// exhibit</p>
+            <div class="case-copy case-copy--spaced">
+                <p>The node is published for anyone to use in <a href="https://registry.comfy.org/nodes/creative_code" target="_blank" rel="noreferrer">ComfyUI</a>, and step-by-step instructions are available on <a href="https://github.com/cvlases/creative-code-comfyui" target="_blank" rel="noreferrer">GitHub</a>.</p>
+                <div class="case-actions">
+                    <a class="case-button" href="https://registry.comfy.org/nodes/creative_code" target="_blank" rel="noreferrer">Open ComfyUI Node</a>
+                    <a class="case-button" href="https://github.com/cvlases/creative-code-comfyui" target="_blank" rel="noreferrer">Open Github Docs</a>
+                </div>
             </div>
         </section>
     </div>
