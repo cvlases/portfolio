@@ -21,7 +21,7 @@
       padding: 3px 4px;
       background: #000080;
       color: white;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: bold;
   }
 
@@ -79,7 +79,7 @@
   .wizard-next {
       background: #c0c0c0;
       font-family: 'PX Sans', 'Courier New', monospace;
-      font-size: 11px;
+      font-size: 12px;
       cursor: pointer;
       color: #000;
       border-top:    1px solid #ffffff;
@@ -99,7 +99,7 @@
   }
 
     .wizard-prompt {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: bold;
       margin: 0 0 4px 0;
   }

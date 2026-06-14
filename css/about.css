@@ -6,48 +6,61 @@
 :root {
     --font-ui: 'PX Sans', 'Courier New', monospace;
     --font-display: 'PX Sans', 'Courier New', monospace;
-    --font-body: 'Anonymous Pro', 'Courier New', monospace;
+    --font-body: 'Proxima Nova', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+    --reading-font: 'Proxima Nova', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+    --retro-font: 'Courier New', monospace;
     --font-accent: 'Bookman Old Style', 'Palatino Linotype', serif;
+}
+
+html {
+    scrollbar-color: #808080 #c0c0c0;
 }
 
 body {
     background-color: #c0c0c0;
-    font-family: var(--font-body);
+    font-family: var(--retro-font);
     margin: 0;
-    padding: 16px;
+    padding: 18px;
     color: #111;
+}
+
+body::-webkit-scrollbar {
+    width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #c0c0c0;
+    border-left: 1px solid #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #b0b0b0;
+    border: 1px solid;
+    border-color: #fff #808080 #808080 #fff;
 }
 
 /* shared white box style */
 .hero, .quick-facts, .obsessions, .contact, .cta {
-    background-color: white;
+    background-color: #fffdf8;
     border: 2px solid black;
-    padding: 22px 24px;
+    padding: 24px 26px;
     box-shadow: 4px 4px 0 #000;
     margin-bottom: 14px;
 }
 
 /* ---- Section labels ---- */
 .section-label {
-    font-family: var(--font-ui);
+    font-family: var(--retro-font);
     margin: 0 0 6px 0;
-    font-size: 9px;
+    font-size: 15px;
     color: #000080;
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-.section-note,
-.contact-note,
-.cta-copy,
-.role-line,
-.bio,
-.strength-card p,
-.fact strong,
-.obsession-card p,
-.contact a {
-    font-family: var(--font-body);
+.bio {
+    font-family: var(--reading-font);
 }
 
 /* ---- Hero ---- */
@@ -95,9 +108,9 @@ body {
 }
 
 .hero-text h1 {
-    font-family: 'Courier New', monospace;
+    font-family: var(--retro-font);
     margin: 0;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: bold;
     letter-spacing: 0.2px;
     line-height: 1.05;
@@ -106,7 +119,7 @@ body {
 .tagline {
     font-family: var(--font-accent);
     margin: 0;
-    font-size: 15px;
+    font-size: 17px;
     font-style: italic;
     color: #000080;
     border-left: 3px solid #000080;
@@ -115,7 +128,7 @@ body {
 
 .role-line {
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     color: #222;
     letter-spacing: 0.2px;
@@ -123,8 +136,8 @@ body {
 
 .bio {
     margin: 0;
-    font-size: 15px;
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 1.78;
     color: #222;
     max-width: 640px;
 }
@@ -138,10 +151,10 @@ body {
 }
 
 .focus-button {
-    font-family: var(--font-display);
-    font-size: 10px;
+    font-family: var(--retro-font);
+    font-size: 12px;
     font-weight: bold;
-    padding: 6px 8px;
+    padding: 8px 10px;
     background: #c0c0c0;
     letter-spacing: 0;
     white-space: nowrap;
@@ -184,8 +197,8 @@ body {
 
 .origin-kicker {
     margin: 0;
-    font-family: var(--font-ui);
-    font-size: 9px;
+    font-family: var(--retro-font);
+    font-size: 15px;
     color: #000080;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -200,8 +213,9 @@ body {
 .origin-article p {
     margin: 0;
     display: grid;
-    font-size: 15px;
-    line-height: 1.7;
+    font-family: var(--reading-font);
+    font-size: 16px;
+    line-height: 1.78;
     max-width: 56ch;
 }
 
@@ -224,8 +238,8 @@ body {
 }
 
 .origin-card span {
-    font-family: var(--font-ui);
-    font-size: 9px;
+    font-family: var(--retro-font);
+    font-size: 12px;
     color: #000080;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -233,8 +247,9 @@ body {
 
 .origin-card p {
     margin: 0;
-    font-size: 13px;
-    line-height: 1.45;
+    font-family: var(--retro-font);
+    font-size: 14px;
+    line-height: 1.55;
 }
 
 .origin-card--hero {
@@ -289,10 +304,10 @@ body {
 }
 
 .fact span {
-    font-family: 'Courier New', monospace;
+    font-family: var(--retro-font);
     display: block;
     margin-bottom: 3px;
-    font-size: 11px;
+    font-size: 12px;
     color: #000080;
     font-weight: bold;
     letter-spacing: 1px;
@@ -301,6 +316,7 @@ body {
 
 .fact strong {
     display: block;
+    font-family: var(--retro-font);
     font-size: 15px;
     line-height: 1.4;
     color: #111;
@@ -320,7 +336,7 @@ body {
     margin: 0;
     font-size: 13px;
     color: #444;
-    font-family: var(--font-accent);
+    font-family: var(--retro-font);
     font-style: italic;
 }
 
@@ -351,6 +367,7 @@ body {
 .obsession-card p {
     margin: 0;
     padding: 10px 10px;
+    font-family: var(--retro-font);
     font-size: 13px;
     line-height: 1.5;
 }
@@ -377,7 +394,7 @@ body {
 }
 
 .contact-button {
-    font-family: var(--font-display);
+    font-family: var(--retro-font);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -413,8 +430,8 @@ body {
 
 .cta button {
     background: transparent;
-    font-family: var(--font-ui);
-    font-size: 11px;
+    font-family: var(--retro-font);
+    font-size: 12px;
     font-weight: normal;
     padding: 2px 4px;
     cursor: pointer;

@@ -78,8 +78,8 @@ body {
 
 /* Icons */
 .icon {
-    width: 72px;
-    height: 72px;
+    width: 78px;
+    min-height: 78px;
     margin: 16px;
     display: flex;
     flex-direction: column;
@@ -103,7 +103,7 @@ body {
 }
 
 .icon-img {
-    width: 32px;
+    width: 36px;
     padding-bottom: 8px;
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
@@ -113,11 +113,11 @@ body {
 
 .icon-txt {
     width: max-content;
-    font-size: 0.5em;
+    font-size: 0.62em;
     padding: 2px;
     border:1px;
-    line-height: 130%;
-    height: 12px;
+    line-height: 140%;
+    min-height: 14px;
     text-align: center;
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */

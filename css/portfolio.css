@@ -5,7 +5,9 @@
 
 :root {
     --ui-font: 'PX Sans', 'Courier New', monospace;
-    --body-font: 'Courier New', monospace;
+    --body-font: 'Proxima Nova', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+    --reading-font: 'Proxima Nova', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+    --retro-font: 'Courier New', monospace;
     --display-font: 'Courier New', monospace;
 }
 
@@ -15,10 +17,10 @@ html {
 
 body {
     margin: 0;
-    padding: 14px;
+    padding: 16px;
     background: #c0c0c0;
     color: #111;
-    font-family: var(--body-font);
+    font-family: var(--retro-font);
 }
 
 body::-webkit-scrollbar {
@@ -44,7 +46,7 @@ span,
 h1,
 h2,
 h3 {
-    font-family: var(--body-font);
+    font-family: var(--retro-font);
 }
 
 .window-page {
@@ -55,16 +57,16 @@ h3 {
 .hero-panel,
 .finder-bar,
 .section-block {
-    background: white;
+    background: #fffdf8;
     border: 2px solid black;
     box-shadow: 4px 4px 0 #000;
-    padding: 18px 20px;
+    padding: 20px 22px;
 }
 
 .section-label {
     margin: 0 0 8px 0;
-    font-family: var(--ui-font);
-    font-size: 9px;
+    font-family: var(--retro-font);
+    font-size: 15px;
     color: #000080;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -72,8 +74,8 @@ h3 {
 
 .hero-copy h1 {
     margin: 0 0 10px 0;
-    font-family: var(--display-font);
-    font-size: 34px;
+    font-family: var(--retro-font);
+    font-size: 38px;
     line-height: 1;
 }
 
@@ -81,8 +83,9 @@ h3 {
 .finder-note,
 .section-note,
 .project-summary {
-    font-size: 14px;
-    line-height: 1.55;
+    font-family: var(--retro-font);
+    font-size: 16px;
+    line-height: 1.62;
 }
 
 .lens-grid {
@@ -97,7 +100,7 @@ h3 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 42px;
+    min-height: 46px;
     padding: 10px 12px;
     background: #efefef;
     border-top: 1px solid #fff;
@@ -105,8 +108,8 @@ h3 {
     border-right: 1px solid #808080;
     border-bottom: 1px solid #808080;
     box-shadow: inset 1px 1px 0 #dfdfdf, 2px 2px 0 #000;
-    font-family: var(--display-font);
-    font-size: 13px;
+    font-family: var(--retro-font);
+    font-size: 14px;
     line-height: 1.2;
     text-decoration: none;
     color: #111;
@@ -166,7 +169,7 @@ h3 {
     border-right: 1px solid #808080;
     border-bottom: 1px solid #808080;
     box-shadow: 2px 2px 0 #000;
-    background: #f8f8f8;
+    background: #fbfbf7;
     text-align: left;
     cursor: pointer;
     padding: 0;
@@ -223,20 +226,20 @@ h3 {
 .project-type,
 .project-meta,
 .archive-section h3 {
-    font-family: var(--ui-font);
+    font-family: var(--retro-font);
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .project-index {
-    font-size: 24px;
+    font-size: 26px;
     color: #111;
 }
 
 .project-type,
 .project-meta,
 .archive-section h3 {
-    font-size: 9px;
+    font-size: 12px;
     color: #000080;
 }
 
@@ -249,12 +252,12 @@ h3 {
 
 .project-card h2 {
     margin: 0;
-    font-family: var(--display-font);
-    font-size: 22px;
+    font-family: var(--retro-font);
+    font-size: 24px;
 }
 
 .project-card--mini h2 {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .project-summary,
@@ -268,8 +271,8 @@ h3 {
 
 .archive-title {
     margin: 2px 0 0;
-    font-family: var(--display-font);
-    font-size: 26px;
+    font-family: var(--retro-font);
+    font-size: 30px;
     font-weight: normal;
 }
 
