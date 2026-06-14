@@ -88,27 +88,45 @@ h3 {
 .lens-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 8px;
+    gap: 10px;
 }
 
 .lens-button {
+    -webkit-appearance: none;
+    appearance: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 10px;
-    background: #c0c0c0;
+    min-height: 42px;
+    padding: 10px 12px;
+    background: #efefef;
     border-top: 1px solid #fff;
     border-left: 1px solid #fff;
     border-right: 1px solid #808080;
     border-bottom: 1px solid #808080;
     box-shadow: inset 1px 1px 0 #dfdfdf, 2px 2px 0 #000;
     font-family: var(--display-font);
-    font-size: 12px;
+    font-size: 13px;
+    line-height: 1.2;
     text-decoration: none;
     color: #111;
+    cursor: pointer;
+    text-align: center;
 }
 
 .lens-button--accent {
+    color: #000080;
+    background: #edf2ff;
+}
+
+.lens-button.is-active,
+.lens-button[aria-pressed='true'] {
+    background: #dfe8ff;
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    box-shadow: inset 1px 1px 0 #8c8c8c;
     color: #000080;
 }
 
@@ -132,6 +150,10 @@ h3 {
 
 .mini-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mini-grid--archive {
+    align-items: stretch;
 }
 
 .project-card {
@@ -240,27 +262,19 @@ h3 {
     margin: 0;
 }
 
-.archive-sections {
-    display: grid;
-    gap: 16px;
+.project-card.is-hidden {
+    display: none;
 }
 
-.archive-section h3 {
-    margin: 0 0 10px 0;
+.archive-title {
+    margin: 2px 0 0;
     font-family: var(--display-font);
-    font-size: 20px;
+    font-size: 26px;
     font-weight: normal;
-    letter-spacing: 0.2px;
-    color: #111;
-    text-transform: none;
-    display: inline-block;
-    padding: 6px 10px;
-    background: #c0c0c0;
-    border-top: 1px solid #fff;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #808080;
-    border-bottom: 1px solid #808080;
-    box-shadow: inset 1px 1px 0 #dfdfdf, 2px 2px 0 #000;
+}
+
+.section-heading--stack {
+    align-items: end;
 }
 
 .tone-blue .project-image {

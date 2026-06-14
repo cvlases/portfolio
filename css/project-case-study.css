@@ -103,6 +103,33 @@ body::-webkit-scrollbar-thumb {
     line-height: 1.55;
 }
 
+.launchpad-row--tags {
+    align-items: start;
+}
+
+.launchpad-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.launchpad-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    line-height: 1;
+    background: #f8f8f8;
+    color: #000080;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    box-shadow: inset 1px 1px 0 #dfdfdf;
+}
+
 .launchpad-actions {
     display: flex;
     flex-wrap: wrap;
