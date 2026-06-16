@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../css/obsession-detail.css">
   <title>Painting Fruit</title>
+  <style>
+    .fruit-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .fruit-gallery img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      border: 2px solid #000;
+      box-shadow: 3px 3px 0 #000;
+      image-rendering: pixelated;
+    }
+  </style>
 </head>
 <body>
   <div class="obsession-page">
@@ -13,7 +30,11 @@
       <h1>painting fruit</h1>
     </section>
     <section class="obsession-copy">
-      <p>I love how ordinary objects can become dramatic with the right light, color, and framing. It feels related to interface design somehow: attention, restraint, and composition doing a lot of work.</p>
+      <p>The colors of fruit genuinely make me happy. So yummy and spectacular! I especially love the orb-shaped ones.</p>
+      <div class="fruit-gallery">
+        <img src="../../assets/images/art_images/raspberry.jpeg" alt="painting of raspberries">
+        <img src="../../assets/images/art_images/oranges.jpeg" alt="painting of oranges">
+      </div>
     </section>
   </div>
 </body>

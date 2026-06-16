@@ -5,6 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../css/obsession-detail.css">
   <title>ComfyUI Nodes</title>
+  <style>
+    .repo-link-box {
+      margin-top: 14px;
+      background: #c0c0c0;
+      border-top: 1px solid #ffffff;
+      border-left: 1px solid #ffffff;
+      border-bottom: 1px solid #808080;
+      border-right: 1px solid #808080;
+      box-shadow: 2px 2px 0 #000;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+    }
+
+    .repo-link-box a {
+      color: #000080;
+      text-decoration: none;
+      border-bottom: 1px dotted #000080;
+      font-weight: bold;
+    }
+
+    .repo-link-box a:hover {
+      color: #0000ff;
+      border-bottom-color: #0000ff;
+    }
+
+    .repo-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+  </style>
 </head>
 <body>
   <div class="obsession-page">
@@ -13,7 +47,18 @@
       <h1>making my own nodes in ComfyUI</h1>
     </section>
     <section class="obsession-copy">
-      <p>I like when tools become hackable and personal. Making custom nodes scratches the same itch as building interfaces: shaping a workflow so it better matches how you actually think.</p>
+      <p>I've just started a role where I make computer vision nodes for students to use in artwork. I like when tools become hackable and personal — shaping a workflow so it better matches how people actually think and create.</p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px;">
+        <img src="../../assets/images/about_images/obsessions/eye-pixel-2.webp" alt="pixel eye" style="width:100%; display:block; border:2px solid #000; box-shadow:3px 3px 0 #000; image-rendering:pixelated;">
+        <img src="../../assets/images/about_images/obsessions/empty.png" alt="empty pixel art" style="width:100%; display:block; border:2px solid #000; box-shadow:3px 3px 0 #000; image-rendering:pixelated;">
+      </div>
+      <div class="repo-link-box">
+        <span class="repo-icon">{ }</span>
+        <div>
+          <div style="font-size: 11px; color: #555; margin-bottom: 3px;">GitHub Repository</div>
+          <a href="https://github.com/CreativeInquiry/ComfyCV" target="_blank" rel="noreferrer">CreativeInquiry / ComfyCV</a>
+        </div>
+      </div>
     </section>
   </div>
 </body>

@@ -3,18 +3,368 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../css/obsession-detail.css">
   <title>Morning in America</title>
+  <style>
+    @font-face {
+      font-family: 'PX Sans';
+      src: url('../../assets/fonts/px_sans_nouveaux.ttf') format('truetype');
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #c0c0c0;
+      font-family: 'Courier New', monospace;
+    }
+
+    .win-player {
+      width: 100%;
+      background: #c0c0c0;
+      border-top: 2px solid #ffffff;
+      border-left: 2px solid #ffffff;
+      border-bottom: 2px solid #808080;
+      border-right: 2px solid #808080;
+    }
+
+    .win-player-titlebar {
+      background: linear-gradient(90deg, #000080, #1084d0);
+      color: #fff;
+      font-size: 13px;
+      font-family: 'Courier New', monospace;
+      padding: 5px 10px;
+      user-select: none;
+    }
+
+    .win-player-body {
+      padding: 12px;
+      display: grid;
+      gap: 9px;
+    }
+
+    .win-player-display {
+      background: #000050;
+      border-top: 1px solid #808080;
+      border-left: 1px solid #808080;
+      border-bottom: 1px solid #ffffff;
+      border-right: 1px solid #ffffff;
+      padding: 18px 18px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .wmp-now-playing {
+      font-size: 10px;
+      color: #ffff00;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .wmp-song-title {
+      font-size: 28px;
+      color: #00ff99;
+      font-weight: bold;
+      margin: 4px 0 2px;
+    }
+
+    .wmp-song-artist {
+      font-size: 14px;
+      color: #aaffdd;
+      margin-bottom: 12px;
+    }
+
+    .wmp-equalizer {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 40px;
+    }
+
+    .wmp-bar {
+      width: 7px;
+      background: #00cc77;
+      flex-shrink: 0;
+    }
+
+    @keyframes eq1 { 0%,100%{height:55%} 50%{height:95%} }
+    @keyframes eq2 { 0%,100%{height:30%} 50%{height:80%} }
+    @keyframes eq3 { 0%,100%{height:70%} 50%{height:40%} }
+    @keyframes eq4 { 0%,100%{height:90%} 50%{height:50%} }
+    @keyframes eq5 { 0%,100%{height:45%} 50%{height:100%} }
+
+    .wmp-equalizer.is-playing .wmp-bar:nth-child(5n+1) { animation: eq1 0.55s ease-in-out infinite; }
+    .wmp-equalizer.is-playing .wmp-bar:nth-child(5n+2) { animation: eq2 0.70s ease-in-out infinite; }
+    .wmp-equalizer.is-playing .wmp-bar:nth-child(5n+3) { animation: eq3 0.60s ease-in-out infinite; }
+    .wmp-equalizer.is-playing .wmp-bar:nth-child(5n+4) { animation: eq4 0.80s ease-in-out infinite; }
+    .wmp-equalizer.is-playing .wmp-bar:nth-child(5n+5) { animation: eq5 0.65s ease-in-out infinite; }
+
+    .win-player-progress {
+      height: 14px;
+      background: #000030;
+      border-top: 1px solid #808080;
+      border-left: 1px solid #808080;
+      border-bottom: 1px solid #ffffff;
+      border-right: 1px solid #ffffff;
+      cursor: pointer;
+    }
+
+    .win-player-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: #000080;
+      pointer-events: none;
+      transition: width 0.5s linear;
+    }
+
+    .win-player-time {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #444;
+      padding: 0 2px;
+    }
+
+    .win-player-controls {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      padding: 4px 0;
+    }
+
+    .wmp-ctrl {
+      font-family: 'Courier New', monospace;
+      font-size: 15px;
+      padding: 6px 14px;
+      background: #c0c0c0;
+      border-top: 1px solid #ffffff;
+      border-left: 1px solid #ffffff;
+      border-bottom: 1px solid #808080;
+      border-right: 1px solid #808080;
+      cursor: pointer;
+      color: #000;
+      line-height: 1.3;
+    }
+
+    .wmp-ctrl:active {
+      border-top: 1px solid #808080;
+      border-left: 1px solid #808080;
+      border-bottom: 1px solid #ffffff;
+      border-right: 1px solid #ffffff;
+    }
+
+    .wmp-ctrl-play {
+      padding: 6px 24px;
+      font-size: 16px;
+    }
+
+    .win-player-volume {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: #444;
+    }
+
+    .vol-track {
+      flex: 1;
+      height: 8px;
+      background: #fff;
+      border-top: 1px solid #808080;
+      border-left: 1px solid #808080;
+      border-bottom: 1px solid #fff;
+      border-right: 1px solid #fff;
+      cursor: pointer;
+    }
+
+    .vol-fill {
+      height: 100%;
+      width: 80%;
+      background: #000080;
+      pointer-events: none;
+    }
+
+    .spotify-link-row {
+      text-align: center;
+      padding: 4px 0 4px;
+    }
+
+    .spotify-link {
+      font-size: 12px;
+      color: #000080;
+      text-decoration: none;
+      border-bottom: 1px dotted #000080;
+    }
+
+    .spotify-link:hover { color: #0000ff; border-bottom-color: #0000ff; }
+
+    #yt-container {
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
 </head>
 <body>
-  <div class="obsession-page">
-    <section class="obsession-hero tone-music">
-      <p class="obsession-kicker">// currently obsessed with</p>
-      <h1>"morning in america"</h1>
-    </section>
-    <section class="obsession-copy">
-      <p>The song has warmth and texture that I keep coming back to. It is the kind of reference point that sneaks into visual moodboards, pacing, and how I think about emotional tone in a project.</p>
-    </section>
+  <div class="win-player">
+    <div class="win-player-titlebar">Windows Media Player</div>
+    <div class="win-player-body">
+      <div class="win-player-display">
+        <span class="wmp-now-playing" id="statusLabel">▌▌ STOPPED</span>
+        <div class="wmp-song-title">Morning in America</div>
+        <div class="wmp-song-artist">Durand Jones &amp; The Indications</div>
+        <div class="wmp-equalizer" id="equalizer">
+          <div class="wmp-bar" style="height:55%"></div>
+          <div class="wmp-bar" style="height:90%"></div>
+          <div class="wmp-bar" style="height:40%"></div>
+          <div class="wmp-bar" style="height:75%"></div>
+          <div class="wmp-bar" style="height:55%"></div>
+          <div class="wmp-bar" style="height:100%"></div>
+          <div class="wmp-bar" style="height:30%"></div>
+          <div class="wmp-bar" style="height:80%"></div>
+          <div class="wmp-bar" style="height:65%"></div>
+          <div class="wmp-bar" style="height:45%"></div>
+          <div class="wmp-bar" style="height:70%"></div>
+          <div class="wmp-bar" style="height:85%"></div>
+        </div>
+      </div>
+
+      <div class="win-player-progress" id="progressBar" onclick="handleProgressClick(event)">
+        <div class="win-player-progress-fill" id="progressFill"></div>
+      </div>
+      <div class="win-player-time">
+        <span id="currentTime">0:00</span>
+        <span id="totalTime">0:00</span>
+      </div>
+
+      <div class="win-player-controls">
+        <button class="wmp-ctrl" onclick="seekToStart()">|◄</button>
+        <button class="wmp-ctrl" onclick="skipBack()">◄◄</button>
+        <button class="wmp-ctrl wmp-ctrl-play" id="playBtn" onclick="togglePlay()">▶</button>
+        <button class="wmp-ctrl" onclick="stopPlayback()">■</button>
+        <button class="wmp-ctrl" onclick="skipForward()">►►</button>
+      </div>
+
+      <div class="win-player-volume">
+        <span>VOL</span>
+        <div class="vol-track" id="volTrack" onclick="handleVolumeClick(event)">
+          <div class="vol-fill" id="volFill"></div>
+        </div>
+      </div>
+
+      <div class="spotify-link-row">
+        <a href="https://open.spotify.com/track/4FAWqHL0FZ3DZ8pMISLc98" target="_blank" rel="noreferrer" class="spotify-link">▶ open in Spotify</a>
+      </div>
+    </div>
   </div>
+
+  <div id="yt-container">
+    <div id="yt-player"></div>
+  </div>
+
+  <script>
+    var player = null;
+    var isPlaying = false;
+    var volume = 80;
+    var progressInterval = null;
+
+    var tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(tag);
+
+    window.onYouTubeIframeAPIReady = function () {
+      player = new YT.Player('yt-player', {
+        height: '1',
+        width: '1',
+        videoId: 'JOkxt4Hf8bw',
+        playerVars: { autoplay: 0, controls: 0, rel: 0, modestbranding: 1 },
+        events: { onStateChange: onPlayerStateChange },
+      });
+    };
+
+    function onPlayerStateChange(event) {
+      if (event.data === YT.PlayerState.PLAYING) {
+        setPlaying(true);
+      } else if (event.data === YT.PlayerState.PAUSED) {
+        setPlaying(false);
+        document.getElementById('statusLabel').textContent = '▌▌ PAUSED';
+      } else if (event.data === YT.PlayerState.ENDED) {
+        setPlaying(false);
+        document.getElementById('statusLabel').textContent = '■ STOPPED';
+        document.getElementById('progressFill').style.width = '0%';
+        document.getElementById('currentTime').textContent = '0:00';
+      }
+    }
+
+    function setPlaying(playing) {
+      isPlaying = playing;
+      document.getElementById('playBtn').textContent = playing ? '▌▌' : '▶';
+      document.getElementById('equalizer').classList.toggle('is-playing', playing);
+      if (playing) {
+        document.getElementById('statusLabel').textContent = '▶ NOW PLAYING';
+        progressInterval = setInterval(updateProgress, 500);
+      } else {
+        clearInterval(progressInterval);
+      }
+    }
+
+    function updateProgress() {
+      if (!player || typeof player.getCurrentTime !== 'function') return;
+      var current = player.getCurrentTime();
+      var duration = player.getDuration();
+      if (!duration) return;
+      document.getElementById('progressFill').style.width = (current / duration * 100) + '%';
+      document.getElementById('currentTime').textContent = fmt(current);
+      document.getElementById('totalTime').textContent = fmt(duration);
+    }
+
+    function fmt(s) {
+      s = Math.floor(s);
+      return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2);
+    }
+
+    function togglePlay() {
+      if (!player) return;
+      isPlaying ? player.pauseVideo() : player.playVideo();
+    }
+
+    function stopPlayback() {
+      if (!player) return;
+      player.stopVideo();
+      clearInterval(progressInterval);
+      document.getElementById('progressFill').style.width = '0%';
+      document.getElementById('currentTime').textContent = '0:00';
+      document.getElementById('statusLabel').textContent = '■ STOPPED';
+    }
+
+    function seekToStart() {
+      if (!player) return;
+      player.seekTo(0, true);
+    }
+
+    function skipBack() {
+      if (!player) return;
+      player.seekTo(Math.max(0, player.getCurrentTime() - 10), true);
+    }
+
+    function skipForward() {
+      if (!player) return;
+      player.seekTo(player.getCurrentTime() + 10, true);
+    }
+
+    function handleProgressClick(e) {
+      if (!player || typeof player.getDuration !== 'function') return;
+      var rect = document.getElementById('progressBar').getBoundingClientRect();
+      player.seekTo(player.getDuration() * ((e.clientX - rect.left) / rect.width), true);
+    }
+
+    function handleVolumeClick(e) {
+      var rect = document.getElementById('volTrack').getBoundingClientRect();
+      volume = Math.round(Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width)) * 100);
+      document.getElementById('volFill').style.width = volume + '%';
+      if (player && typeof player.setVolume === 'function') player.setVolume(volume);
+    }
+  </script>
 </body>
 </html>
