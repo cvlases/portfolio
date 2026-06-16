@@ -108,6 +108,15 @@ body::-webkit-scrollbar-thumb {
     box-shadow: 2px 2px 0 #000;
 }
 
+.collection-card-thumb {
+    display: block;
+    width: calc(100% + 28px);
+    margin: -14px -14px 4px;
+    height: 130px;
+    object-fit: cover;
+    border-bottom: 1px solid #808080;
+}
+
 .collection-card--link {
     color: inherit;
     text-decoration: none;
