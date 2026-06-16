@@ -60,7 +60,7 @@ body::-webkit-scrollbar-thumb {
 
 .collection-kicker {
     margin: 0 0 8px 0;
-    font-size: 15px;
+    font-size: 17px;
     color: #000080;
     font-weight: normal;
     letter-spacing: 2px;
@@ -70,7 +70,7 @@ body::-webkit-scrollbar-thumb {
 .collection-hero h1 {
     margin: 0 0 10px 0;
     font-family: var(--retro-font);
-    font-size: 36px;
+    font-size: 40px;
     font-weight: normal;
     line-height: 1;
 }
@@ -78,7 +78,7 @@ body::-webkit-scrollbar-thumb {
 .collection-hero p:not(.collection-kicker),
 .collection-card p {
     font-family: var(--retro-font);
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.68;
 }
 
@@ -90,7 +90,7 @@ body::-webkit-scrollbar-thumb {
 
 .collection-section h2 {
     margin: 0 0 12px 0;
-    font-size: 15px;
+    font-size: 17px;
     color: #000080;
 }
 
@@ -127,19 +127,19 @@ body::-webkit-scrollbar-thumb {
 .collection-card h3 {
     margin: 0;
     font-family: var(--retro-font);
-    font-size: 24px;
+    font-size: 32px;
     font-weight: normal;
 }
 
 .collection-tag {
-    font-size: 12px;
+    font-size: 17px;
     color: #000080;
 }
 
 .collection-note {
     margin: 0;
     font-family: var(--retro-font);
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.58;
 }
 

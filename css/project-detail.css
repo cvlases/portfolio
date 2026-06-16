@@ -49,7 +49,7 @@ body {
 .detail-label {
     margin: 0 0 8px 0;
     font-family: 'PX Sans', 'Courier New', monospace;
-    font-size: 12px;
+    font-size: 17px;
     color: #000080;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -58,14 +58,14 @@ body {
 .detail-hero h1 {
     margin: 0 0 10px 0;
     font-family: 'Courier New', monospace;
-    font-size: 30px;
+    font-size: 32px;
 }
 
 .detail-hero p:last-child,
 .detail-box p:last-child {
     margin: 0;
     font-family: 'Proxima Nova', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.6;
 }
 

@@ -66,7 +66,7 @@ h3 {
 .section-label {
     margin: 0 0 8px 0;
     font-family: var(--retro-font);
-    font-size: 15px;
+    font-size: 17px;
     color: #000080;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -75,7 +75,7 @@ h3 {
 .hero-copy h1 {
     margin: 0 0 10px 0;
     font-family: var(--retro-font);
-    font-size: 38px;
+    font-size: 40px;
     line-height: 1;
 }
 
@@ -84,7 +84,7 @@ h3 {
 .section-note,
 .project-summary {
     font-family: var(--retro-font);
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.62;
 }
 
@@ -109,7 +109,7 @@ h3 {
     border-bottom: 1px solid #808080;
     box-shadow: inset 1px 1px 0 #dfdfdf, 2px 2px 0 #000;
     font-family: var(--retro-font);
-    font-size: 14px;
+    font-size: 17px;
     line-height: 1.2;
     text-decoration: none;
     color: #111;
@@ -179,11 +179,11 @@ h3 {
 }
 
 .project-card--visual {
-    grid-template-rows: 190px 1fr;
+    grid-template-rows: 230px 1fr;
 }
 
 .project-card--mini {
-    grid-template-rows: 92px 1fr;
+    grid-template-rows: 118px 1fr;
 }
 
 .project-image {
@@ -232,14 +232,14 @@ h3 {
 }
 
 .project-index {
-    font-size: 26px;
+    font-size: 32px;
     color: #111;
 }
 
 .project-type,
 .project-meta,
 .archive-section h3 {
-    font-size: 12px;
+    font-size: 17px;
     color: #000080;
 }
 
@@ -253,11 +253,11 @@ h3 {
 .project-card h2 {
     margin: 0;
     font-family: var(--retro-font);
-    font-size: 24px;
+    font-size: 32px;
 }
 
 .project-card--mini h2 {
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .project-summary,
@@ -272,7 +272,7 @@ h3 {
 .archive-title {
     margin: 2px 0 0;
     font-family: var(--retro-font);
-    font-size: 30px;
+    font-size: 32px;
     font-weight: normal;
 }
 

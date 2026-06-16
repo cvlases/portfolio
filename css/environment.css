@@ -67,7 +67,7 @@ body::-webkit-scrollbar-thumb {
 .moment-type,
 .overlap-box span {
   font-family: var(--retro-font);
-  font-size: 15px;
+  font-size: 17px;
   color: #000080;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -80,7 +80,7 @@ body::-webkit-scrollbar-thumb {
 .env-hero h1 {
   margin: 0 0 12px 0;
   font-family: var(--retro-font);
-  font-size: 38px;
+  font-size: 40px;
   line-height: 1;
 }
 
@@ -90,7 +90,7 @@ body::-webkit-scrollbar-thumb {
 .moment-copy p,
 .overlap-box p {
   font-family: var(--retro-font);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.65;
 }
 
@@ -114,7 +114,7 @@ body::-webkit-scrollbar-thumb {
 
 .env-hero-photo span {
   font-family: var(--retro-font);
-  font-size: 12px;
+  font-size: 17px;
   color: #000080;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -155,7 +155,7 @@ body::-webkit-scrollbar-thumb {
 .why-card h2 {
   margin: 0 0 8px 0;
   font-family: var(--retro-font);
-  font-size: 24px;
+  font-size: 32px;
   font-weight: normal;
 }
 
@@ -194,7 +194,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .moment-index {
-  font-size: 24px;
+  font-size: 32px;
 }
 
 .moment-copy {
@@ -204,7 +204,7 @@ body::-webkit-scrollbar-thumb {
 .moment-copy h2 {
   margin: 0 0 8px 0;
   font-family: var(--retro-font);
-  font-size: 23px;
+  font-size: 32px;
   font-weight: normal;
 }
 

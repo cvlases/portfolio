@@ -34,7 +34,7 @@ body {
 .obsession-kicker {
   margin: 0;
   font-family: 'PX Sans', 'Courier New', monospace;
-  font-size: 12px;
+  font-size: 17px;
   color: #000080;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -42,13 +42,13 @@ body {
 
 .obsession-page h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: normal;
 }
 
 .obsession-copy p {
   margin: 0;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.6;
 }
 

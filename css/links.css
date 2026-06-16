@@ -53,7 +53,7 @@ body::-webkit-scrollbar-thumb {
 .section-label,
 .link-kicker {
     font-family: var(--retro-font);
-    font-size: 15px;
+    font-size: 17px;
     color: #000080;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -66,14 +66,14 @@ body::-webkit-scrollbar-thumb {
 .links-copy h1 {
     margin: 0 0 10px 0;
     font-family: var(--retro-font);
-    font-size: 38px;
+    font-size: 40px;
     font-weight: normal;
 }
 
 .hero-note,
 .link-card-copy p {
     font-family: var(--retro-font);
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.65;
 }
 
@@ -110,7 +110,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .link-glyph {
-    font-size: 38px;
+    font-size: 40px;
     line-height: 1;
 }
 
@@ -121,7 +121,7 @@ body::-webkit-scrollbar-thumb {
 .link-card-copy h2 {
     margin: 0 0 8px 0;
     font-family: var(--retro-font);
-    font-size: 24px;
+    font-size: 32px;
     font-weight: normal;
 }
 

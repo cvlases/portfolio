@@ -60,7 +60,7 @@ body::-webkit-scrollbar-thumb {
     grid-column: 1 / -1;
     margin: 0;
     font-family: var(--retro-font);
-    font-size: 38px;
+    font-size: 40px;
     line-height: 1;
     font-weight: normal;
 }
@@ -95,7 +95,7 @@ body::-webkit-scrollbar-thumb {
 .launchpad-label,
 .launchpad-abstract-label {
     font-family: var(--retro-font);
-    font-size: 15px;
+    font-size: 17px;
     color: #000080;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -123,7 +123,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     padding: 5px 8px;
     font-family: var(--retro-font);
-    font-size: 12px;
+    font-size: 17px;
     line-height: 1;
     background: #f8f8f8;
     color: #000080;
@@ -154,7 +154,7 @@ body::-webkit-scrollbar-thumb {
     border-right: 1px solid #808080;
     border-bottom: 1px solid #808080;
     box-shadow: inset 1px 1px 0 #dfdfdf, 2px 2px 0 #000;
-    font-size: 14px;
+    font-size: 17px;
     color: #111;
     text-decoration: none;
 }
@@ -167,7 +167,7 @@ body::-webkit-scrollbar-thumb {
 .launchpad-abstract p {
     margin: 0;
     font-family: var(--reading-font);
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.7;
 }
 
@@ -195,7 +195,7 @@ body::-webkit-scrollbar-thumb {
 .case-kicker,
 .case-label {
     margin: 0 0 22px 0;
-    font-size: 20px;
+    font-size: 32px;
     color: #000080;
     font-weight: normal;
     letter-spacing: 2.2px;
@@ -204,7 +204,7 @@ body::-webkit-scrollbar-thumb {
 .case-hero h1 {
     margin: 0 0 10px 0;
     font-family: var(--retro-font);
-    font-size: 38px;
+    font-size: 40px;
     line-height: 1;
     font-weight: normal;
 }
@@ -212,7 +212,7 @@ body::-webkit-scrollbar-thumb {
 .case-hook {
     margin: 0;
     font-family: var(--reading-font);
-    font-size: 21px;
+    font-size: 32px;
     line-height: 1.45;
     max-width: 46rem;
 }
@@ -237,7 +237,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .meta-chip strong {
-    font-size: 12px;
+    font-size: 17px;
     color: #000080;
     font-weight: normal;
 }
@@ -269,7 +269,7 @@ body::-webkit-scrollbar-thumb {
     border-bottom: 1px solid #808080;
     color: #222;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 17px;
 }
 
 .tracker-link.is-active {
@@ -297,7 +297,7 @@ body::-webkit-scrollbar-thumb {
 
 .case-copy {
     font-family: var(--reading-font);
-    font-size: clamp(16px, 0.76rem + 0.42vw, 19px);
+    font-size: clamp(17px, 0.84rem + 0.48vw, 20px);
     line-height: 1.78;
 }
 
@@ -324,13 +324,13 @@ body::-webkit-scrollbar-thumb {
 
 .question-callout-strong {
     margin: 0 0 12px 0;
-    font-size: clamp(23px, 1.05rem + 1vw, 32px);
+    font-size: clamp(24px, 1.12rem + 1vw, 34px);
     line-height: 1.38;
 }
 
 .question-callout-secondary {
     margin: 0;
-    font-size: clamp(17px, 0.84rem + 0.32vw, 20px);
+    font-size: clamp(18px, 0.92rem + 0.36vw, 21px);
     line-height: 1.7;
 }
 
@@ -360,8 +360,8 @@ body::-webkit-scrollbar-thumb {
 
 .editorial-copy p {
     margin: 0;
-    font-size: clamp(17px, 0.86rem + 0.44vw, 19px);
-    line-height: 1.8;
+    font-size: inherit;
+    line-height: inherit;
     letter-spacing: 0.003em;
 }
 
@@ -371,7 +371,7 @@ body::-webkit-scrollbar-thumb {
 
 .editorial-subhead {
     font-family: var(--retro-font);
-    font-size: 15px;
+    font-size: 17px;
     letter-spacing: 2.2px;
     text-transform: uppercase;
     color: #111;
@@ -408,7 +408,7 @@ body::-webkit-scrollbar-thumb {
 
 .editorial-media figcaption {
     font-family: var(--retro-font);
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.45;
     color: #444;
 }
@@ -427,7 +427,7 @@ body::-webkit-scrollbar-thumb {
 
 .feature-figure figcaption {
     font-family: var(--retro-font);
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.5;
     color: #444;
 }
@@ -472,12 +472,12 @@ body::-webkit-scrollbar-thumb {
 .case-box h2 {
     margin: 0 0 10px 0;
     font-family: var(--retro-font);
-    font-size: 26px;
+    font-size: 32px;
     font-weight: normal;
 }
 
 .artifact-card h3 {
-    font-size: 21px;
+    font-size: 32px;
 }
 
 .artifact-figure,
@@ -561,7 +561,7 @@ body::-webkit-scrollbar-thumb {
 .artifact-card p,
 .case-list li {
     font-family: var(--reading-font);
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.62;
 }
 
@@ -606,7 +606,7 @@ body::-webkit-scrollbar-thumb {
     box-shadow: inset 1px 1px 0 #dfdfdf, 2px 2px 0 #000;
     color: #111;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 @media (max-width: 900px) {
@@ -656,13 +656,13 @@ body::-webkit-scrollbar-thumb {
     }
 
     .editorial-copy p {
-        font-size: 15.5px;
-        line-height: 1.72;
+        font-size: inherit;
+        line-height: inherit;
     }
 
     .case-label {
         margin-bottom: 14px;
-        font-size: 13px;
+        font-size: 17px;
     }
 
     .launchpad-row {
@@ -680,7 +680,7 @@ body::-webkit-scrollbar-thumb {
 
     .launchpad-abstract p,
     .launchpad-value {
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .case-hero h1 {

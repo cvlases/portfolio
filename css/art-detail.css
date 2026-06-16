@@ -32,7 +32,7 @@ h1 {
 .detail-label {
     margin: 0;
     font-family: 'PX Sans', 'Courier New', monospace;
-    font-size: 12px;
+    font-size: 17px;
     color: #000080;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -40,13 +40,13 @@ h1 {
 
 .art-detail h1 {
     margin: 0;
-    font-size: 30px;
+    font-size: 32px;
     font-weight: normal;
 }
 
 .art-detail p:last-child {
     margin: 0;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.6;
 }
 
