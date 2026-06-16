@@ -4,6 +4,7 @@
   const archiveKicker = document.getElementById('archive-kicker');
   const archiveTitle = document.getElementById('archive-title');
   const filterStatus = document.getElementById('filter-status');
+  const archiveSection = document.getElementById('all-work');
 
   if (!lensButtons.length || !cards.length || !archiveKicker || !archiveTitle || !filterStatus) {
     return;
@@ -82,5 +83,15 @@
     });
   });
 
-  updateLens('all');
+  const params = new URLSearchParams(window.location.search);
+  const requestedLens = (params.get('lens') || 'all').trim().toLowerCase();
+  const initialLens = lensMeta[requestedLens] ? requestedLens : 'all';
+
+  updateLens(initialLens);
+
+  if (initialLens !== 'all' && archiveSection) {
+    requestAnimationFrame(() => {
+      archiveSection.scrollIntoView({ block: 'start' });
+    });
+  }
 })();

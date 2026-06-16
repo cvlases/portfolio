@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/project-case-study.css">
+    <title>MuMMI: Multiscale Molecular Dynamics</title>
+</head>
+<body>
+    <div class="case-page">
+        <section class="case-launchpad">
+            <div class="case-launchpad-grid">
+                <h1 class="launchpad-title">MuMMI: Multiscale Molecular Dynamics</h1>
+                <div class="launchpad-panel">
+                    <div class="launchpad-meta">
+                        <div class="launchpad-row"><span class="launchpad-label">Role</span><span class="launchpad-value">Team Lead, researcher</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Tools</span><span class="launchpad-value">Perl · Python · CLI</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Time</span><span class="launchpad-value">2024–2025</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Team</span><span class="launchpad-value">Undergraduate capstone project with Lawrence Livermore National Laboratory</span></div>
+                        <div class="launchpad-row launchpad-row--tags">
+                            <span class="launchpad-label">Tags</span>
+                            <div class="launchpad-tags">
+                                <a href="../portfolio.html?lens=research#all-work" class="launchpad-tag" onclick="window.parent.openPopup('html/portfolio.html?lens=research#all-work', 980, 760); return false;">Research</a>
+                                <a href="../portfolio.html?lens=leadership#all-work" class="launchpad-tag" onclick="window.parent.openPopup('html/portfolio.html?lens=leadership#all-work', 980, 760); return false;">Leadership</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="launchpad-actions">
+                        <a class="launchpad-chip" href="https://pubs.acs.org/doi/10.1021/acsomega.5c07601" target="_blank" rel="noreferrer">Read the paper</a>
+                    </div>
+                </div>
+                <div class="launchpad-panel launchpad-abstract">
+                    <span class="launchpad-abstract-label">Abstract</span>
+                    <div>
+                       <p>As the Product Manager for this multi-institutional capstone project, I led a cross-functional team to design, build, and deploy UCG-mini-MuMMI. This open-source Python ecosystem integrates Ultra-Coarse-Grained protein models and diffusion-based machine learning into an accessible, low-compute desktop workflow, lowering the technical and financial barriers for global cancer research labs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-box">
+            <figure class="feature-figure feature-figure--in-copy">
+                <div class="artifact-screen">
+                    <img src="../../assets/images/project_images/mummi/abstract.png" alt="Abstract visual summarizing the MuMMI workflow and research contribution">
+                </div>
+                <figcaption>A compact view of the project: scaling molecular simulation workflows down from supercomputing infrastructure into something more accessible.</figcaption>
+            </figure>
+        </section>
+
+        <nav class="process-tracker">
+            <a class="tracker-link" href="#define">Define</a>
+            <a class="tracker-link" href="#design">Design</a>
+            <a class="tracker-link" href="#develop">Develop</a>
+            <a class="tracker-link" href="#deploy">Deploy</a>
+        </nav>
+
+        <section class="case-box" id="define">
+            <p class="case-label">// define</p>
+            <div class="editorial-flow">
+                <div class="editorial-beat editorial-beat--top">
+                    <div class="editorial-rail-spacer" aria-hidden="true"></div>
+                    <div class="editorial-copy case-copy">
+                        <p>My first ever published paper, <em>Integrating Ultra-Coarse-Grained Protein Models into Accessible Workflows for Multiscale Molecular Dynamics</em>, published in ACS Omega. We were studying how proteins move and interact, which requires massive computational power. While high-resolution all-atom simulations capture fine details, they are too resource-heavy to run at a large scale, forcing scientists to rely on supercomputers.</p>
+                        <p class="editorial-subhead">The Problem: A Resource Bottleneck in Cancer Research</p>
+                        <p>Prior work by Lawrence Livermore National Laboratory established MuMMI, a massive computational framework used to study RAS-RAF protein interactions, which are critical drivers in cancer development. However, MuMMI is highly resource-intensive, requiring high-performance supercomputing clusters to balance fine-grained and coarse-grained simulations.</p>
+                        <figure class="feature-figure feature-figure--in-copy">
+                            <div class="artifact-screen">
+                                <img src="../../assets/images/project_images/mummi/figure1.png" alt="Overview of multiscale molecular dynamics simulations and the relationship between UCG and CG scales">
+                            </div>
+                            <figcaption>(A) Overview of multiscale molecular dynamics simulations. (B) Example CG Martini simulation patch showing the protein backbone and lipid phosphate beads only. (C) Superimposed UCG and CG simulations of the RAS-RBDCRD protein complex with labeled domains.</figcaption>
+                        </figure>
+                        <p>Because of this heavy infrastructure reliance, smaller academic labs and independent research teams are effectively locked out of running these vital simulations. The core product challenge was to maximize the exploration of protein conformational space while drastically lowering the computational cost.</p>
+                        <div class="editorial-equation editorial-equation--block" aria-label="Product contrast between traditional workflows and the MuMMI goal">
+                            <span class="equation-expression">[Traditional Workflows] → High Compute Cost → Supercomputer Reliance → Research Silos</span>
+                            <span class="equation-expression">[Our Product Goal] → Low Compute Cost → Desktop-Accessible Tools → Open Science</span>
+                        </div>
+                        <p class="editorial-subhead">The PM Challenge: Bridging the Technical Divide</p>
+                        <p>As the PM, my first task was defining the scope of a highly cross-functional project that involved undergraduate researchers, academic advisors, and senior scientists. The technical strategy required integrating a mathematical abstraction called heterogeneous elastic network modeling (hENM) into an automated, reproducible machine learning pipeline.</p>
+                        <p><span class="editorial-highlight">Our goal: create an end-to-end version of the MuMMI framework that didn’t require LLNL’s supercomputer, without sacrificing the biological accuracy of the protein simulations.</span></p>
+                        <figure class="feature-figure feature-figure--in-copy">
+                            <div class="artifact-screen">
+                                <img src="../../assets/images/project_images/mummi/figure2.png" alt="Software infrastructure for the multiscale MuMMI workflow">
+                            </div>
+                            <figcaption>Schematic of software infrastructure for the multiscale workflow. The upper box describes the two main simulation scales, UCG and CG, and steps to transition between them. The lower box describes the HPC workflow components supporting this infrastructure.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-box" id="design">
+            <p class="case-label">// design</p>
+            <div class="editorial-flow">
+                <div class="editorial-beat editorial-beat--top">
+                    <div class="editorial-rail-spacer" aria-hidden="true"></div>
+                    <div class="editorial-copy case-copy">
+                        <p class="editorial-subhead">Mapping the Multiscale Pipeline Shift</p>
+                        <p>Transitioning from a supercomputer infrastructure to a local developer environment meant redefining the entire system architecture. We had to design an automated way to pass data between three completely different spatial resolutions:</p>
+                        <div class="editorial-equation editorial-equation--block" aria-label="Pipeline from coarse-grained simulation through optimization and backmapping">
+                            <span class="equation-expression">[Coarse-Grained Martini Resolution] → [Automated Optimization] → [Ultra-Coarse-Grained Scale] → [ML Diffusion Backmapping] → [Recovered High-Res Structures]</span>
+                        </div>
+                        <p>We spent early strategy sessions wireframing the developer journey. We realized that forcing biophysicists to manually adjust bond coefficients between these scales would cause massive friction and lead to human error.</p>
+                        <p>To solve this, we designed two core user-facing solutions:</p>
+                        <p><span class="editorial-highlight">The Automated Refinement Engine:</span> a scalable framework that reads the physical fluctuations observed in high-resolution data and automatically calculates the structural bond coefficients for the lower-resolution UCG model.</p>
+                        <p><span class="editorial-highlight">The Generative Backmapping Experience:</span> a machine learning pipeline that uses diffusion models to automatically reverse the abstraction process, accurately mapping ultra-coarse data back up into detailed structures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-box" id="develop">
+            <p class="case-label">// develop</p>
+            <div class="editorial-flow">
+                <div class="editorial-beat editorial-beat--top">
+                    <div class="editorial-rail-spacer" aria-hidden="true"></div>
+                    <div class="editorial-copy case-copy">
+                        <p class="editorial-subhead">Managing the Prototyping and Learning Curve</p>
+                        <p>Our early machine learning prototypes struggled with structural stability during the backmapping phase. Standard generative models frequently produced physically impossible protein structures that violated basic chemical laws.</p>
+                        <p>We shifted our development strategy toward a diffusion-based architecture. We trained our models to learn the precise spatial mappings between scales, forcing the generative output to adhere to real-world biophysical constraints.</p>
+                        <figure class="feature-figure feature-figure--in-copy">
+                            <div class="artifact-screen">
+                                <img src="../../assets/images/project_images/mummi/figure3.png" alt="Transformer architecture used for noise prediction within the diffusion model">
+                            </div>
+                            <figcaption>Transformer architecture used for noise prediction within the diffusion model.</figcaption>
+                        </figure>
+                        <p>To turn these isolated scripts into a cohesive ecosystem, we engineered a modular Python architecture:</p>
+                        <div class="editorial-equation editorial-equation--block" aria-label="Simplified project architecture for UCG mini MuMMI">
+                            <span class="equation-expression">ucg-mini-mummi/</span>
+                            <span class="equation-expression">├── ucg_core/ · fluctuation analysis + bond estimation</span>
+                            <span class="equation-expression">├── ml_pipeline/ · diffusion model + spatial mapping</span>
+                            <span class="equation-expression">└── workflows/ · end-to-end CLI runner</span>
+                        </div>
+                        <p>The models we created offered promising results.</p>
+                        <figure class="feature-figure feature-figure--in-copy">
+                            <div class="artifact-screen">
+                                <img src="../../assets/images/project_images/mummi/figure5.png" alt="Automatic refinement results for intramolecular interactions">
+                            </div>
+                            <figcaption>Results from automatic refinement of intramolecular interactions, including scaling behavior and bond coefficient analysis.</figcaption>
+                        </figure>
+                        <figure class="feature-figure feature-figure--in-copy">
+                            <div class="artifact-screen">
+                                <img src="../../assets/images/project_images/mummi/figure6.png" alt="Validation results for diffusion-based backmapping">
+                            </div>
+                            <figcaption>Results from validation of backmapping with diffusion models, including loss curves, RMSD distributions, and sampled structures.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-box" id="deploy">
+            <p class="case-label">// deploy</p>
+            <div class="editorial-flow">
+                <div class="editorial-beat editorial-beat--top">
+                    <figure class="editorial-media editorial-media--compact">
+                        <div class="artifact-screen">
+                            <img src="../../assets/images/project_images/mummi/team.png" alt="The MuMMI team together">
+                        </div>
+                        <figcaption>The team made the project possible — technically, intellectually, and personally.</figcaption>
+                    </figure>
+                    <div class="editorial-copy case-copy">
+                        <p class="editorial-subhead">Release and Impact</p>
+                        <p>The final product was peer-reviewed and published in ACS Omega, establishing the validity of our low-compute alternative within the chemical and biological research communities.</p>
+                        <p>By delivering UCG-mini-MuMMI, we successfully decoupled advanced protein conformational sampling from supercomputing clusters, packaging the framework into a scalable, open-source toolset available on GitHub.</p>
+                        <div class="editorial-equation editorial-equation--block" aria-label="Scale reduction from supercomputer cluster to local desktop">
+                            <span class="equation-expression">[Supercomputer MuMMI Cluster] ⇒ [UCG-mini-MuMMI] ⇒ [Local Desktop Workflow]</span>
+                        </div>
+                        <p class="editorial-subhead">Reflection</p>
+                        <p>Acting as a Product Manager within a deeply scientific domain taught me how to translate abstract, mathematical concepts into tangible software features. By designing a workflow that automates both structural coefficient estimation and generative backmapping, we successfully delivered a tool that helps the scientific community focus on what matters most: accelerating cancer research.</p>
+                        <p>The true success of this project came from having a great team. Even though we barely knew each other at the start of working together, we ended up becoming great friends.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="../../js/project-scrollspy.js"></script>
+</body>
+</html>

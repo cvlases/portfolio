@@ -75,6 +75,37 @@ body {
     gap: 12px;
 }
 
+.detail-card {
+    display: grid;
+    gap: 12px;
+    align-content: start;
+}
+
+.detail-card-image {
+    background: #d6d6d6;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    box-shadow: inset 1px 1px 0 #dfdfdf;
+    padding: 8px;
+}
+
+.detail-card-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.detail-card .detail-label {
+    margin: 0;
+}
+
+.detail-card p:last-child {
+    margin: 0;
+}
+
 .detail-actions a {
     display: inline-flex;
     padding: 8px 12px;
