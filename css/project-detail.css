@@ -120,8 +120,71 @@ body {
     font-family: 'Courier New', monospace;
 }
 
+.detail-list-card {
+    display: grid;
+    gap: 18px;
+}
+
+.detail-intro {
+    margin: 0;
+    font-family: 'Proxima Nova', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.paper-group {
+    display: grid;
+    gap: 10px;
+}
+
+.paper-group-label {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000080;
+}
+
+.paper-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: baseline;
+    padding: 12px 14px;
+    text-decoration: none;
+    color: #111;
+    background: #fbfbf7;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    box-shadow: 2px 2px 0 #000;
+}
+
+.paper-title {
+    font-family: 'Courier New', monospace;
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+.paper-date {
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+    color: #000080;
+    text-align: right;
+}
+
 @media (max-width: 640px) {
     .detail-grid {
         grid-template-columns: 1fr;
+    }
+
+    .paper-row {
+        grid-template-columns: 1fr;
+    }
+
+    .paper-date {
+        text-align: left;
     }
 }
