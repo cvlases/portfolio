@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/project-case-study.css">
+    <title>Addressing the Selection Problem in Explainable AI</title>
+</head>
+<body>
+    <div class="case-page">
+        <section class="case-launchpad">
+            <div class="case-launchpad-grid">
+                <h1 class="launchpad-title">Addressing the Selection Problem in Explainable AI</h1>
+                <div class="launchpad-panel">
+                    <div class="launchpad-meta">
+                        <div class="launchpad-row"><span class="launchpad-label">Role</span><span class="launchpad-value">First author, lead researcher</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Tools</span><span class="launchpad-value">Python</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Time</span><span class="launchpad-value">Spring 2026</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Team</span><span class="launchpad-value">Katelyn Morrison (CMU HCII) and me</span></div>
+                        <div class="launchpad-row launchpad-row--tags">
+                            <span class="launchpad-label">Tags</span>
+                            <div class="launchpad-tags">
+                                <span class="launchpad-tag">Research</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="launchpad-actions">
+                        <span class="launchpad-chip">Paper to be linked soon!</span>
+                    </div>
+                </div>
+                <div class="launchpad-panel launchpad-abstract">
+                    <span class="launchpad-abstract-label">Abstract</span>
+                    <div>
+                        <p>This project argues that a major failure point in deployed explainable AI happens before explanation even begins: at the moment users are asked to decide which explanation technique they want. Rather than treating poor XAI uptake as a problem of explanation quality alone, the paper formalizes a different obstacle — the selection problem — and shows why technique choice cannot reliably succeed when users lack the knowledge required to map natural language uncertainty onto specific XAI methods.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-box">
+            <figure class="feature-figure feature-figure--in-copy">
+                <div class="artifact-screen">
+                    <img src="../../assets/images/project_images/selection_problem/smart_mode.png" alt="Smart Mode interface for the multi-agent XAI system">
+                </div>
+                <figcaption>Smart Mode routes clinicians&apos; questions to the right XAI agent without requiring them to choose a technique first.</figcaption>
+            </figure>
+        </section>
+
+        <nav class="process-tracker">
+            <a class="tracker-link" href="#understand">Understand</a>
+            <a class="tracker-link" href="#define">Define</a>
+            <a class="tracker-link" href="#develop">Develop</a>
+            <a class="tracker-link" href="#explain">Explain</a>
+        </nav>
+
+        <section class="case-box" id="understand">
+            <p class="case-label">// understand</p>
+            <div class="editorial-flow">
+                <div class="editorial-beat editorial-beat--top">
+                    <figure class="editorial-media editorial-media--compact">
+                        <div class="artifact-screen">
+                            <img src="../../assets/images/project_images/selection_problem/ask.png" alt="Clinician-facing interface prompting natural language questions to an XAI system">
+                        </div>
+                        <figcaption>A system where clinicians ask in natural language, and the interface decides which explanation mode best fits the question.</figcaption>
+                    </figure>
+                    <div class="editorial-copy case-copy">
+                        
+                        <p>This project started with a system, rather than a question. I&apos;d been working on a multi-agent XAI tool for clinical CT viewing — a chat interface that could route a radiologist&apos;s natural language questions to different XAI agents depending on what they were asking. We used saliency for “what did the model look at?” Counterfactuals for “would it still be flagged if the nodule were smaller?” Exemplars for “what similar cases has the model seen?”</p>
+                        <p>I knew it felt different from conventional XAI interfaces, because the clinician didn&apos;t have to know which technique they wanted. But every time I tried to explain why that mattered, I kept gesturing at vague things — it&apos;s more natural, it lowers the barrier, it meets clinicians where they are…</p>
+                        <p>The shift happened when I started paying closer attention to the XAI adoption literature. Paper after paper documented the same pattern: clinicians ignored explanations, misinterpreted them, used them to confirm rather than scrutinize AI outputs. And the field&apos;s standard response was that the techniques need to be better.</p>
+                        <p><span class="editorial-highlight">The system we designed did something else entirely: it removed the moment when the user had to choose which technique to invoke.</span></p>
+                        <p>The failure in deployed XAI was happening before the explanation — at the moment the user had to translate their felt uncertainty into a technique selection. And conventional interfaces required that translation, with no support, before any explanation had been produced that could help the user figure out what they wanted.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-box" id="define">
+            <p class="case-label">// define</p>
+            <div class="editorial-flow">
+                <div class="editorial-beat editorial-beat--top">
+                    <div class="editorial-rail-spacer" aria-hidden="true"></div>
+                    <div class="editorial-copy case-copy">
+                        
+                        <p>I started calling it “the selection problem” in my notes.</p>
+                        <p>Katelyn encouraged me to formalize the argument, to use my philosophy background.</p>
+                        <p>Of course users have to translate their question into a technique selection — but is that translation actually what fails? The formalization helped me show that specifically the mapping from natural language uncertainty to technique selection requires knowledge the average user population doesn&apos;t have, and therefore the translation cannot succeed reliably by structural induction rather than user error.</p>
+                        <div class="editorial-equation editorial-equation--block" aria-label="Formal notation for the selection problem">
+                            <span>Formally, the selection problem occurs when</span>
+                            <span class="equation-expression">e / ê ∈ E* (ω). (1)</span>
+                            <span>The selection problem represents a failure in the explanatory process, where the output provided by the system remains functionally irrelevant to the user&apos;s actual needs.</span>
+                        </div>
+                        <p>I went through several rounds finding the right level of formalism. What landed was a premise/conclusion structure with mathematical notation used sparingly within prose: enough scaffolding to make the argument precise and citable, but not so much that it became inaccessible.</p>
+                        <p><span class="editorial-highlight">Formalization, I learned, is a design tool with the same kinds of tradeoffs as any other interface choice.</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-box" id="develop">
+            <p class="case-label">// develop</p>
+            <div class="editorial-flow">
+                <div class="editorial-beat editorial-beat--top">
+                    <div class="editorial-rail-spacer" aria-hidden="true"></div>
+                    <div class="editorial-copy case-copy">
+                        
+                        <figure class="feature-figure feature-figure--in-copy">
+                            <div class="artifact-screen">
+                                <img src="../../assets/images/project_images/selection_problem/instantiation.png" alt="Instantiation of the orchestrator architecture in the XAI interface">
+                            </div>
+                            <figcaption>The orchestrator instantiation in interface form: Smart Mode handles the mapping from question to explanation agent.</figcaption>
+                        </figure>
+                        <p>The orchestrator instantiation itself is Gemini 2.5 Flash, configured with function-calling schemas that encode the correspondence between query types and agents. Users see the orchestrator as “Smart Mode” in the interface; if they already know which explanation they want, they can also invoke individual agents directly. <span class="editorial-highlight">The clinician never has to see a technique-selection control unless they want to.</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-box" id="explain">
+            <p class="case-label">// explain</p>
+            <div class="editorial-flow">
+                <div class="editorial-beat editorial-beat--top">
+                    <div class="editorial-rail-spacer" aria-hidden="true"></div>
+                    <div class="editorial-copy case-copy">
+                        
+                        <p>By the time the paper was finished, the project had inverted. I had started with GenAIxRad as the main thing and wrote the formalization to explain why it mattered. The final paper has the formalization as the central contribution and GenAIxRad as evidence that the architecture is implementable.</p>
+                        <p>This is my first research paper as lead author. I&apos;ll be presenting it at the IJCAI 2026 Workshop on Explainable AI this summer in Germany!</p>
+                        <p>I don&apos;t fully have words yet for what it feels like to have a paper accepted at a venue like this. More to come after the conference in August.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="../../js/project-scrollspy.js"></script>
+</body>
+</html>
