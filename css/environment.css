@@ -52,9 +52,13 @@ body::-webkit-scrollbar-thumb {
 
 .env-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.82fr);
-  gap: 18px;
+  grid-template-columns: 1fr 200px;
+  gap: 20px;
   align-items: start;
+}
+
+.hero-photo-frame {
+  margin: 0;
 }
 
 .env-hero-copy {
@@ -146,7 +150,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .hero-photo-frame img {
-  aspect-ratio: 4 / 4.55;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
 }
 
@@ -293,9 +297,44 @@ body::-webkit-scrollbar-thumb {
   margin: 0;
 }
 
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.why-card {
+  padding: 14px 16px;
+  background: #fbfbf7;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  box-shadow: 2px 2px 0 #000;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.why-card h2 {
+  margin: 0;
+  font-family: var(--retro-font);
+  font-size: 19px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.why-card p {
+  margin: 0;
+  font-family: var(--retro-font);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
 @media (max-width: 900px) {
   .env-hero {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 160px;
   }
 
   .story-grid,
@@ -306,6 +345,10 @@ body::-webkit-scrollbar-thumb {
   .story-card--feature {
     grid-column: span 2;
   }
+
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -315,7 +358,8 @@ body::-webkit-scrollbar-thumb {
 
   .env-hero-notes,
   .story-grid,
-  .moment-grid {
+  .moment-grid,
+  .why-grid {
     grid-template-columns: 1fr;
   }
 
