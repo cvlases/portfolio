@@ -4,104 +4,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/project-case-study.css">
-    <title>Newspeak Dictionary</title>
+    <title>The First Edition of the Newspeak Dictionary</title>
 </head>
 <body>
     <div class="case-page">
         <section class="case-launchpad">
             <div class="case-launchpad-grid">
-                <h1 class="launchpad-title">Newspeak Dictionary</h1>
+                <h1 class="launchpad-title">The First Edition of the Newspeak Dictionary</h1>
                 <div class="launchpad-panel">
                     <div class="launchpad-meta">
-                        <div class="launchpad-row"><span class="launchpad-label">Role</span><span class="launchpad-value">Solo developer · Artist</span></div>
-                        <div class="launchpad-row"><span class="launchpad-label">Tools</span><span class="launchpad-value">Next.js · Modal · Gemma · SAE steering</span></div>
-                        <div class="launchpad-row"><span class="launchpad-label">Time</span><span class="launchpad-value">Spring 2025</span></div>
-                        <div class="launchpad-row"><span class="launchpad-label">Team</span><span class="launchpad-value">Advanced Creative Code capstone</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Role</span><span class="launchpad-value">Creative coding project</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Tools</span><span class="launchpad-value">React · Next.js · WebGL · Gemma-2-2B · GemmaScope (SAEs) · Modal Labs</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Time</span><span class="launchpad-value">Spring 2026</span></div>
+                        <div class="launchpad-row"><span class="launchpad-label">Team</span><span class="launchpad-value">Just me</span></div>
                         <div class="launchpad-row launchpad-row--tags">
                             <span class="launchpad-label">Tags</span>
                             <div class="launchpad-tags">
-                                <span class="launchpad-tag">Art</span>
                                 <span class="launchpad-tag">Coding</span>
-                                <span class="launchpad-tag">Ethics</span>
+                                <span class="launchpad-tag">Design</span>
+                                <span class="launchpad-tag">Art</span>
                             </div>
                         </div>
                     </div>
                     <div class="launchpad-actions">
-                        <span class="launchpad-chip">Language + AI</span>
-                        <span class="launchpad-chip">Creative code</span>
+                        <a class="launchpad-chip" href="https://medium.com/@clairevlases/the-first-edition-of-the-newspeak-dictionary-abcd1f2bb030" target="_blank" rel="noreferrer">Read on Medium</a>
+                        <a class="launchpad-chip" href="https://hollow-words.vercel.app/" target="_blank" rel="noreferrer">Visit the site</a>
                     </div>
                 </div>
                 <div class="launchpad-panel launchpad-abstract">
                     <span class="launchpad-abstract-label">Abstract</span>
                     <div>
-                        <p>Newspeak Dictionary is a web experience about what AI language models do to words with physical and ecological weight. Through model steering, writing, and interface design, it asks what gets flattened, what stays latent, and how literary framing can call meaning back.</p>
+                        <p>Certain words, like delve, confluence, culmination, have come to feel distinctly AI-flavored, blowing up in writing since the release of ChatGPT. Many of these same words have second, more literal meanings that have quietly fallen out of use. I built a web dictionary where each entry shows a word&apos;s hollow AI-prose definition, then glitches open into its literal meaning. The user must then physically dig through pixels to converse with a language model that has been steered, using mechanistic interpretability tools, to embody the word&apos;s natural meaning.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section class="case-box">
+            <figure class="feature-figure feature-figure--in-copy">
+                <div class="artifact-screen">
+                    <img src="../../assets/images/project_images/newspeak/delve.png" alt="Delve dictionary entry showing the project’s main visual language">
+                </div>
+                <figcaption>The dictionary opens with words that feel overused by AI prose, then glitches them back toward their older, physical meanings.</figcaption>
+            </figure>
+        </section>
+
         <nav class="process-tracker">
-            <a class="tracker-link" href="#hook">Hook</a>
-            <a class="tracker-link" href="#problem">The Problem</a>
-            <a class="tracker-link" href="#pivot">The Pivot</a>
-            <a class="tracker-link" href="#process">Process</a>
-            <a class="tracker-link" href="#artifacts">Artifacts</a>
-            <a class="tracker-link" href="#learning">What I Learned</a>
+            <a class="tracker-link" href="#hollowing">Hollowing</a>
+            <a class="tracker-link" href="#detangling">Detangling</a>
+            <a class="tracker-link" href="#restoration">Restoration</a>
         </nav>
 
-        <section class="case-box" id="hook">
-            <p class="case-label">// hook</p>
-            <div class="case-copy">
-                <p>This project probes words with physical and ecological weight — words like <em>soil</em>, <em>root</em>, and <em>bloom</em> — to ask what large language models default to, what they forget, and what can be recovered through framing.</p>
+        <section class="case-box" id="hollowing">
+            <p class="case-label">// hollowing</p>
+            <div class="editorial-flow">
+                <div class="editorial-beat editorial-beat--top">
+                    <div class="editorial-rail-spacer" aria-hidden="true"></div>
+                    <div class="editorial-copy case-copy">
+                        <p class="editorial-subhead">The Hollowing</p>
+                        <p>The motivation began with George Orwell. In his novel, <em>1984</em>, the Party&apos;s Newspeak Dictionary shrinks every year, as “the whole climate of thought will be different. Orthodoxy means not thinking — not needing to think.” That phrase, <span class="editorial-highlight">not needing to think</span>, made me reflect on my own use of AI.</p>
+                        <figure class="feature-figure feature-figure--in-copy">
+                            <div class="artifact-screen">
+                                <img src="../../assets/images/project_images/newspeak/words.png" alt="Words generated in excess across AI-influenced writing">
+                            </div>
+                            <figcaption>Words generated in excess.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="editorial-beat">
+                    <figure class="editorial-media editorial-media--compact">
+                        <div class="artifact-screen">
+                            <img src="../../assets/images/project_images/newspeak/research.png" alt="Research visual showing elevated AI-associated vocabulary in contemporary writing">
+                        </div>
+                        <figcaption>Researchers have documented a sudden surge in a distinct AI-flavored vocabulary.</figcaption>
+                    </figure>
+                    <div class="editorial-copy case-copy">
+                        <p>Meanwhile, researchers have documented something specific: a vocabulary of words appearing at suddenly elevated frequencies in academic papers and online writing since late 2022. Not just <em>delve</em> but <em>intricate</em>, <em>multifaceted</em>, <em>navigate</em>, <em>harness</em>, <em>paramount</em>, <em>transformative</em>… An entire register of words has been amplified by large language models, and that register is now leaking back into spoken language.</p>
+                        <p>Many of these words have older, more concrete meanings rooted in the natural world. Their meanings have somehow been displaced. The question reshaped itself: were the literal meanings still inside the model, somewhere? Or had they been hollowed all the way out?</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="case-box" id="problem">
-            <p class="case-label">// the problem</p>
-            <div class="case-copy">
-                <p>AI prose often flattens words that should feel sensory, local, and embodied. The initial thesis was that AI had stripped them down. The more interesting discovery was that the meanings were still latent inside the model.</p>
+        <section class="case-box" id="detangling">
+            <p class="case-label">// detangling</p>
+            <div class="editorial-flow">
+                <div class="editorial-beat editorial-beat--top">
+                    <div class="editorial-rail-spacer" aria-hidden="true"></div>
+                    <div class="editorial-copy case-copy">
+                        <p class="editorial-subhead">Detangling</p>
+                        <div class="editorial-equation" aria-label="Model activation through a sparse autoencoder into interpretable features">
+                            <span>Model activation</span>
+                            <span class="equation-arrow">→</span>
+                            <span>SAE</span>
+                            <span class="equation-arrow">→</span>
+                            <span>16,384 features</span>
+                        </div>
+                        <p>To peek inside the model&apos;s representations, I used a mechanistic interpretability technique called a Sparse Autoencoder (SAE). Think of it as a prism: the model&apos;s internal representation of a word is white light, a tangled mix of concepts. The SAE separates it into individual colors — interpretable features, each one corresponding to a specific concept the model has learned.</p>
+                    </div>
+                </div>
+
+                <div class="editorial-beat">
+                    <figure class="editorial-media editorial-media--compact">
+                        <div class="artifact-screen">
+                            <img src="../../assets/images/project_images/newspeak/prism.png" alt="Prism metaphor illustrating how sparse autoencoders separate tangled model meanings">
+                        </div>
+                        <figcaption>The prism metaphor that helped the project explain a technical process in human terms.</figcaption>
+                    </figure>
+                    <div class="editorial-copy case-copy">
+                        <p>I used GemmaScope, an open SAE release from Google DeepMind, trained on every layer of Gemma-2-2B. For each word in my dictionary, I ran the same diagnostic: feed the word to the model twice, once in an AI-prose context and once in a nature-writing context, and compare which features fire in each.</p>
+                        <p>For <em>confluence</em>, the top concrete-context feature was about “references to rivers and their geographic features.” For <em>delve</em>: “references to archaeological activities and discoveries.”</p>
+                        <figure class="feature-figure feature-figure--in-copy">
+                            <div class="artifact-screen">
+                                <img src="../../assets/images/project_images/newspeak/gemma.png" alt="GemmaScope feature readout showing literal features inside the model">
+                            </div>
+                            <figcaption>The model still contained the concrete meanings — they just weren&apos;t the ones people were reaching for anymore.</figcaption>
+                        </figure>
+                        <p><span class="editorial-highlight">The literal meanings were still in there. We – the people – weren&apos;t using them.</span></p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="case-box" id="pivot">
-            <p class="case-label">// the pivot</p>
-            <div class="case-copy">
-                <p>The project got better when the thesis changed. Instead of proving loss, it became an experiment in retrieval: how technical steering and literary framing could surface something richer.</p>
-            </div>
-        </section>
+        <section class="case-box" id="restoration">
+            <p class="case-label">// restoration</p>
+            <div class="editorial-flow">
+                <div class="editorial-beat editorial-beat--top">
+                    <figure class="editorial-media editorial-media--compact">
+                        <div class="artifact-screen">
+                            <img src="../../assets/images/project_images/newspeak/glitch.gif" alt="Glitch transition from AI definition into literal definition">
+                        </div>
+                        <figcaption>The transition is part of the argument: the hollow meaning fragments, then reforms into something grounded.</figcaption>
+                    </figure>
+                    <div class="editorial-copy case-copy">
+                        <p class="editorial-subhead">Restoration</p>
+                        <p>Diagnosis is half the project. By adding a scaled version of an SAE feature&apos;s decoder direction to the model&apos;s residual stream during generation, I was able to amplify that feature&apos;s influence over the output.</p>
+                        <p>Without steering, the prompt “The confluence of...” outputs financial analysis about the S&amp;P 500. With steering active, the exact same model and seed details the Ganges-Brahmaputra-Meghna delta. I paired this mechanical steering with an engineered persona prompt to ground the dialogue in a first-person perspective.</p>
+                        <figure class="feature-figure feature-figure--in-copy">
+                            <div class="artifact-screen">
+                                <img src="../../assets/images/project_images/newspeak/dictionary.png.png" alt="Vintage-styled dictionary interface showing the literal meaning reveal">
+                            </div>
+                            <figcaption>The final interface acts like a strange old dictionary: click a word, watch it glitch, then ask the river.</figcaption>
+                        </figure>
+                        <p>The final piece is a vintage-styled web dictionary deployed on Vercel, with a Modal Labs serverless GPU backend running Gemma-2-2B in 4-bit. Each entry shows a word and its hollow AI-prose definition. Clicking glitches the typography from serif into monospace, the definition unravels and reforms into the literal meaning, and a small chat field appears: ask the river…</p>
+                    </div>
+                </div>
 
-        <section class="case-box" id="process">
-            <p class="case-label">// process</p>
-            <ul class="case-list">
-                <li>Started with GPT-2 / GemmaScope exploration.</li>
-                <li>Moved toward Gemma-2-2B with SAE feature steering.</li>
-                <li>Built a vintage-glitch visual language to match the feeling of excavation.</li>
-                <li>Used the interface itself as part of the argument, not just a wrapper around outputs.</li>
-            </ul>
-        </section>
-
-        <section class="case-box" id="artifacts">
-            <p class="case-label">// artifacts</p>
-            <div class="artifact-grid">
-                <article class="artifact-card tone-green">
-                    <h3>Interface Screens</h3>
-                    <p>Homepage, dictionary states, model outputs, and transition moments should anchor this page visually.</p>
-                </article>
-                <article class="artifact-card tone-peach">
-                    <h3>Writing + Thesis Shift</h3>
-                    <p>The conceptual pivot is part of the artifact set here — screenshots alone are not enough.</p>
-                </article>
-                <article class="artifact-card tone-lilac">
-                    <h3>Demo / Recording</h3>
-                    <p>A short recording of the experience would help this project land immediately.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="case-box" id="learning">
-            <p class="case-label">// what i learned</p>
-            <div class="case-copy">
-                <p>The strongest version of this project is not anti-AI in a broad way. It is more precise than that: a study in how model behavior, interface framing, and literary context shape meaning together.</p>
+                <div class="editorial-beat">
+                    <div class="editorial-rail-spacer" aria-hidden="true"></div>
+                    <div class="editorial-copy case-copy">
+                        <p>The reader gets three exchanges. Whatever they ask, the river (or whatever the word you have selected is) answers. Each response is generated live by Gemma with the persona prompt as system message and the SAE steering hook applied to layer 20.</p>
+                        <figure class="feature-figure feature-figure--in-copy">
+                            <div class="artifact-screen">
+                                <img src="../../assets/images/project_images/newspeak/chatbot.gif" alt="Live chatbot interaction with a steered literal-word persona">
+                            </div>
+                            <figcaption>The chat is the final proof of concept: the steered word answers back as if its older meaning still had a voice.</figcaption>
+                        </figure>
+                        <p>Read the full story on <a href="https://medium.com/@clairevlases/the-first-edition-of-the-newspeak-dictionary-abcd1f2bb030" target="_blank" rel="noreferrer">Medium</a>, or visit the live <a href="https://hollow-words.vercel.app/" target="_blank" rel="noreferrer">site</a>.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </div>

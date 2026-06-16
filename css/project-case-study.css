@@ -565,6 +565,24 @@ body::-webkit-scrollbar-thumb {
     height: auto;
 }
 
+.editorial-equation {
+    margin: 6px 0 22px;
+    padding-left: 18px;
+    border-left: 3px solid #dce7ff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--retro-font);
+    font-size: 17px;
+    line-height: 1.7;
+    color: #111;
+}
+
+.equation-arrow {
+    color: #000080;
+}
+
 .story-rail .artifact-screen img {
     max-height: 180px;
     object-fit: contain;
@@ -679,6 +697,11 @@ body::-webkit-scrollbar-thumb {
     .editorial-media--compact,
     .editorial-media--wide {
         max-width: 100%;
+    }
+
+    .editorial-equation {
+        padding-left: 14px;
+        gap: 6px;
     }
 
     .feature-figure--duo {
